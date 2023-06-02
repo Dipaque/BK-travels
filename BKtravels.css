@@ -113,7 +113,7 @@ border-color: #FB8500;
     cursor:pointer;
     font-family:  'Wix Madefor Display', sans-serif;
     color:grey;
-    border:1px #f9f9f9 solid;
+    border:1px #f4f4f4 solid;
     transition: transform .7s;
     background-color: #f9f9f9;
     border-radius: 12px;
@@ -124,7 +124,7 @@ border-color: #FB8500;
 }
 @media(max-width:400px){
     .elite{
-        margin-left:6%;
+        width:90%;
     }
 }
 .Readmore{
@@ -132,6 +132,7 @@ border-color: #FB8500;
 }
 .Readmore:hover{
     color:#FB8500;
+    text-decoration: none;
 }
 
   .h_line {
@@ -252,11 +253,11 @@ border-color: #FB8500;
     }
 }
 
-/* @media (max-width:460px) {
+@media (max-width:460px) {
     .reviews{
         display: none;
     }
-} */
+}
 input {
     width: 75%;
     padding: 2%;
