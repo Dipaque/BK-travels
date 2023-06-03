@@ -114,15 +114,16 @@ border-color: #FB8500;
     transition: transform .7s;
     background-color: #f4f4f6;
     border-radius: 12px;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
     
     /* box-shadow: 0 0 3px #8e8d8d; */
     transition: transform .5s ease-in-out;
 }
-@media(max-width:360px){
-    .col-lg-4{
-        width: 90%;
+@media(max-width:576px){
+    .elite{
+        
+        width: 95%;
     }
 }
 .Readmore{
@@ -249,6 +250,7 @@ border-color: #FB8500;
 
     }
 }
+
 
 @media (max-width:460px) {
     .reviews{
