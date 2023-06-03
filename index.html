@@ -42,55 +42,32 @@
     <body>
         
         <!-- Nav bar -->
-        <nav class="  navbar navbar-expand-lg bg-light fixed-top" style="font-family: 'Wix Madefor Display', sans-serif;">
-          <div class="container">
-            <a class="navbar-brand" href="#"><img src="navbarlogo_prev_ui.png" alt="logo" width="170px"></a>
-            <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-              <span class="navbar-toggler-icon"></span>
+        <nav class="container-fluid navbar  navbar-light navbar-nav-scroll fixed-top bg-light   navbar-expand-lg "data-spy="affix" data-offset-top="0" style="font-family:'Wix Madefor Display',sans-serif;" >
+          <div class="container  ">
+            <a href="index.html" class="navbar-brand "><img src="navbarlogo_prev_ui.png"alt="logo" width="170px"></a>
+            <button class="navbar-toggler navbar-danger " type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
+            <span class="navbar-toggler-icon "></span>
             </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                  <li class="nav-item">
-                    <a class="nav-link active text-center ps-4 pe-4" aria-current="page" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item text-center">
-                    <a class="nav-link ps-4 pe-4" href="#section0">About</a>
-                  </li>
-                  <li class="nav-item text-center">
-                    <a class="nav-link ps-4 pe-4" href="#section1">
-                      Service
-                    </a>
-                  </li>
-                  <li class="nav-item text-center">
-                    <a class="nav-link ps-4 pe-4" href="#section2">
-                      Tour
-                    </a>
-                  </li>
-                  <li class="nav-item text-center">
-                    <a class="nav-link ps-4 pe-4" href="#section3">
-                      Testimonial
-                    </a>
-                  </li>
-                  <li class="nav-item text-center "><button class="  nav-link mx-auto contactlink p-2" type="button" onclick="location.href='#section4'"  style="border-radius:5px; border:1px #FB8500 solid;background-color:#FB8500;color:#FFFF;" >Contact us</button></li>
-                </ul>
-                  
-              </div>
-            </div>
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav navlink ms-auto mt-2 mt-md-0 ">
+              <li class="nav-item text-center"><a class="nav-link active  ps-4 pe-4 " href="index.html">Home</a></li>
+              <li class="nav-item text-center "><a class="nav-link active ps-4 pe-4 " href="#section0">Who we are?</a></li>
+            <li class="nav-item text-center" ><a class="nav-link active ps-4 pe-4"  href="#section1">What we do?</a></li>
+            <li class="nav-item text-center" ><a class="nav-link active ps-4 pe-4"  href="#section2">Tour</a></li>
+            <li class="nav-item text-center" ><a class="nav-link active ps-4 pe-4"  href="#section3">Testimonial</a></li>
+            <li class="nav-item text-center "><button class="nav-link mx-auto contactlink p-2 " type="button" onclick="location.href='#section4'"  style="border-radius:5px; border:1px #FB8500 solid;background-color:#FB8500;color:#FFFF;" >Contact us</button></li>
+            </ul>
           </div>
-        </nav>
+        </div>
+      </nav>
 <!-- Home -->
 <div class="home  " style="background-image: url(summer-2880261_1280.jpg);background-position: center;background-size: cover;background-repeat: no-repeat;height: 46rem;">
   
     
         <div class="hometext container-fluid" style="background-color:black;opacity:70%;height: 46rem; ">
-          <h4 class="text-center" style="font-family:Poppins;font-weight: bolder;padding-top:23%;font-size: 37px;background-color:black;color:#FFFF;"><b>"Hang on with us on your holidays! "</b></h4>
+          <h4 class="text-center" style="font-family:Poppins;font-weight: bolder;padding-top:20%;font-size: 37px;background-color:black;color:#FFFF;"><b>Hang on with us on your holidays!</b></h4>
   <h5 class="mt-5 mx-auto" style="font-family:Poppins;background-color:black;color:#FFFF;"><b>"Set Sail for New Horizons"</b></h5>
-  <button class="mx-auto contactlink mt-5 p-2 " type="button" onclick="location.href='#section3'">Explore Destination </button>
+  <button class="mx-auto-md contactlink mt-5 p-2 " type="button" onclick="location.href='#section3'">Explore Destination </button>
         </div>
       </div>
         <!-- About -->
@@ -105,7 +82,7 @@
               <p style="color:grey">Your gateway to extraordinary adventures and unforgettable experiences around the globe. We are passionate about travel and dedicated to crafting remarkable journeys that inspire and enrich your life.
                 At our agency, we believe that travel has the power to transform, educate, and create lifelong memories.
                 Our team of experienced travel enthusiasts is here to guide you every step of the way.</p></div>
-                <button class="  nav-link ms-5 contactlink mt-3 p-2 " type="button" onclick="location.href='#section3'"  style="border-radius:5px; border:1px #FB8500 solid;color:#FB8500;padding-left: 3%;padding-right: 3%;" >View All Tour  <i class="fa-solid fa-circle-arrow-right ps-2" style="color: #FB8500;"></i></button>
+                <button class="  nav-link ms-5  mt-3 pt-1 pb-1 " type="button" onclick="location.href='#section3'"  style="border-radius:5px; border:1px #FB8500 solid;color:#FB8500;padding-left: 2%;padding-right: 2%;" >View All Tour<i class="fa-solid fa-arrow-right ps-2" style="color: #FB8500;"></i></button>
               </div>
           </div>
           </div>
@@ -114,17 +91,16 @@
         
         <!-- Services -->
         <div class=" service   container-fluid mt-5  mt-5 pb-5" id="section1">
-           <div class="container mt-5 ps-5  pe-5 pt-5"><h6 class="mb-5 text-center" style="color:grey;font-family: 'Poppins',sans-serif;"><b>SERVICE</b></h6>  
+           <div class="container mt-5 ps-5  pe-5 pt-5"><h6 class="mb-5 mt-5 text-center" style="color:grey;font-family: 'Poppins',sans-serif;"><b>SERVICE</b></h6>  
             <h4 class="text-center" style="font-family:Poppins;"><b>What we do?</b></h4>
                   
             <div class="container mt-5 text-center">
               <div class="row justify-content-md-center">
-                <div class="col-lg-4 mx-auto-md ">
-                <div class="mt-3 mb-5 text-start p-3  elite ps-3">
+                <div class="col-lg-4  ">
+                <div class="elite mt-3 mb-5 text-start p-3   ps-3">
                   <img src="accomodation_prev_ui.png" class="mb-5 mt-4 ms-3" alt="camera" height="50" width="50">
                   <h5 class="mb-4 ms-3">Accomodation</h5>
-                  <p class="p-3" style="line-height: 2;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim accusamus quisquam qui dicta laboriosam </p>
-                  
+                  <p class="p-3" style="line-height: 2;">We offer the best accomodation for our guest. Enjoy your cool holidays with good food and luxurious rooms.</p>
                   <a href="#" class="Readmore ms-3"  type="submit"onclick="location.href='#section3'">Book now <i class="fa-solid fa-arrow-right ps-1"></i></a>
                 </div>
                 </div>
@@ -132,7 +108,7 @@
                 <div class="mt-3 mb-5 text-start p-3  elite ps-3">
                   <img src="car_prev_ui.png" class="mb-5 mt-4 ms-3" alt="camera" height="50" width="60">
                   <h5 class="mb-4 ms-3">Car Service</h5>
-                  <p class="p-3" style="line-height: 2;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim accusamus quisquam qui dicta laboriosam </p>
+                  <p class="p-3" style="line-height: 2;">we provide cars for rent arround Pondicherry. The best car service for you on time everytime. </p>
                   
                   <a href="#" class="Readmore ms-3"  type="submit"onclick="location.href='#section3'">Book now <i class="fa-solid fa-arrow-right ps-1"></i></a>
                 </div>
@@ -141,7 +117,7 @@
                 <div class="mt-3 mb-5 text-start p-3  elite ps-3">
                   <img src="cameragrey_prev_ui.png" class="mb-5 mt-4 ms-3" alt="camera" height="50" width="60">
                   <h5 class="mb-4 ms-3">Camera Service</h5>
-                  <p class="p-3" style="line-height: 2;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim accusamus quisquam qui dicta laboriosam </p>
+                  <p class="p-3" style="line-height: 2;">We offer cameras and drones for rent. Captuere your awesome moments with our rental camera.</p>
                   
                   <a href="#" class="Readmore ms-3"  type="submit"onclick="location.href='#section3'">Book now<i class="fa-solid fa-arrow-right ps-1"></i></a>
                 </div>
@@ -152,7 +128,7 @@
             </div>
         <!-- Testimonial -->
         <div class=" reviews service  text-center container-fluid pb-5" id="section3">
-          <div class="container mt-5 ps-5  pe-5 pt-5"><h6 class="mb-5 text-center" style="color:grey;font-family: 'Poppins',sans-serif;"><b>TESTIMONIAL</b></h6> 
+          <div class="container mt-5 ps-5  pe-5 pt-5"><h6 class="mb-5 mt-5 text-center" style="color:grey;font-family: 'Poppins',sans-serif;"><b>TESTIMONIAL</b></h6> 
             <h4 class="text-center" style="font-family: 'Poppins';"><b>Hear from our clients!</b></h4>
             <div class="container-fluid-md">
               <div class="row">
@@ -205,29 +181,20 @@
             </div>
             <!-- Contact -->
             <div class="container-fluid mt-5" id="section4">
-              <div class="container mt-5 ps-5  pe-5 pt-5"><h6 class="mb-5 text-center" style="color:grey;"><b>CONTACT US</b></h6>
-                <h5 class="text-center mt-5 mb-5" style="color:#FB8500; font-family: 'Poppins';"><b>Any queries or remark? Just write us a message!</b></h5>
-                <div class="container  ">
-                  <div class="row ">
+              <div class="container mt-5 ps-5  pe-5 pt-5"><h6 class="mt-5 text-center mb-5" style="color:grey;font-family: 'Poppins',sans-serif;"><b>CONTACT US</b></h6>
+                <h5 class="text-center mt-5 mb-5" style="color:#FB8500; font-family: 'Poppins',sans-serif;"><b>Any queries or remark? Just write us a message!</b></h5>
+                <div class="container">
+                  <div class="row mt-5 ">
                     <div class="col-lg-6 contactnav">
                       <h5 style="font-family: 'Poppins',sans-serif; color: white;" class="ps-4 mt-5 "><b>Contact Information</b></h5>
                       <p class="ps-4" style="color:white;">Say something to start live chat!</p>
                       <div class=" " style="margin-top: 15%;">
                        <span> <i class="fa-solid fa-phone-volume mt-5 ms-5 me-4 " style="font-size: larger;" ></i>+91 7708994177</span><br>
                         <span><i class="fa-solid fa-envelope mt-5 ms-5 me-4" style="font-size: larger ;"></i>BKtravels01@gmail.com</span><br>
-                        <span><i class="fa-solid fa-location-dot mt-5 ms-5 me-4" style="font-size: larger;"></i>40/72 Sai street, 9th cross, Lawspet,</span>
+                        <span><i class="fa-solid fa-location-dot mt-5 ms-5 me-4" style="font-size: larger;"></i>40/72, Sai street, 9th cross, Lawspet,</span>
                         <span><p  class="mt-2 " style="margin-left: 20%;"> Puducherry-605008.</p></span>
                       </div>
-                      <!-- <div class="" style="margin-left: 10%; margin-top: 15%;">
-                      <a class="mt-5 externallink"href="https://instagram.com/bk_world_official?igshid=MzRlODBiNWFlZA=="><i class="fa-brands fa-instagram " style="color:white;font-size: x-large;
-                        border-radius: 50%;
-                        border: 1px solid white;
-                        padding: 10px;"></i></a>
-                        <a class="mt-5 ms-5 externallink"href="https://instagram.com/bk_world_official?igshid=MzRlODBiNWFlZA=="><i class="fa-brands fa-whatsapp " style="color:white;font-size: x-large;
-                          border-radius: 50%;
-                          border: 1px solid white;
-                          padding: 10px;"></i></a>
-                      </div> -->
+      
                     </div>
                     <div class="col-lg-6  pt-5 contactform ">
                       <form action="https://formspree.io/f/xzbqqjej" method="POST">

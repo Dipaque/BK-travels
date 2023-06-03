@@ -24,12 +24,11 @@ body{
      border:1px #FB8500 solid;
     background-color: black;
     color:#FB8500;
-    opacity:100%;
 }
-/* .contactlink:hover{
+.contactlink:hover{
     background-color: #FB8500;
     color:white;
-} */
+}
 
   
  .offcanvas-body> .navbar-nav > .active > .a {
@@ -103,28 +102,27 @@ border-color: #FB8500;
 }
 .servicewrap{
     width: 70%;
-    margin-left: 15%;
-    border: 2px #FAEDCD solid;
-    background-color: #FAEDCD;
+   
     height: 50%;
     
 }
 .elite{
-    cursor:pointer;
+    
     font-family:  'Wix Madefor Display', sans-serif;
     color:grey;
-    border:1px #f4f4f4 solid;
+    border:1px #f4f4f6 solid;
     transition: transform .7s;
-    background-color: #f9f9f9;
+    background-color: #f4f4f6;
     border-radius: 12px;
     margin-left: 5%;
     margin-right: 5%;
+    
     /* box-shadow: 0 0 3px #8e8d8d; */
     transition: transform .5s ease-in-out;
 }
-@media(max-width:400px){
-    .elite{
-        width:90%;
+@media(max-width:360px){
+    .col-lg-4{
+        width: 90%;
     }
 }
 .Readmore{
@@ -230,8 +228,7 @@ border-color: #FB8500;
     font-family: 'Wix Madefor Display', sans-serif;
     border:2px solid #FB8500;
     padding: 2%;
-    height:70%;
-    padding-bottom: 6%;
+    height:34.5rem;
     color: white;
     width:25%;
     background-color: #FB8500;
