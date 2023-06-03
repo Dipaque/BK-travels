@@ -114,18 +114,18 @@ border-color: #FB8500;
     transition: transform .7s;
     background-color: #f4f4f6;
     border-radius: 12px;
-    margin-left: 2%;
-    margin-right: 2%;
+    /* margin-left: 2%;
+    margin-right: 2%; */
     
     /* box-shadow: 0 0 3px #8e8d8d; */
     transition: transform .5s ease-in-out;
 }
-@media(max-width:576px){
+/* @media(max-width:576px){
     .elite{
-        
-        width: 95%;
+        margin-left: 2%;
+        width: 90%;
     }
-}
+} */
 .Readmore{
     color:grey; text-decoration: none;font-weight: bold; font-family: 'Wix Madefor Display';
 }
@@ -216,7 +216,6 @@ border-color: #FB8500;
     font-family: 'Wix Madefor Display', sans-serif;
     border:2px solid lightgray;
     color: white;
-    padding: 2%;
     height:70%;
     width:25%;
     background-color: #ffff;
