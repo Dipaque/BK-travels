@@ -228,7 +228,7 @@ border-color: #FB8500;
     font-family: 'Wix Madefor Display', sans-serif;
     border:2px solid #FB8500;
     padding: 2%;
-    height:34.5rem;
+    height:33rem;
     color: white;
     width:25%;
     background-color: #FB8500;
@@ -279,10 +279,10 @@ input:focus{
     width:20%;
     border-radius: 5px;
 }
-@media (max-width:576px) {
+@media (max-width:510px) {
     .submit{
         width:55%;
-        margin-left: 20%;
+        margin-left: 15%;
         
     }
 }
