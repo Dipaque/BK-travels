@@ -53,7 +53,7 @@
             <ul class="navbar-nav navlink ms-auto mt-2 mt-md-0 ">
               <li class="nav-item text-center"><a class="nav-link active  ps-4 pe-4 " href="index.html">Home</a></li>
               <li class="nav-item text-center "><a class="nav-link active ps-4 pe-4 " href="#section0">Who we are?</a></li>
-            <li class="nav-item text-center" ><a class="nav-link active ps-4 pe-4"  href="#section1">What we do?</a></li>
+            <li class="nav-item text-center" ><a class="nav-link active ps-4 pe-4"  href="#section1">What we do?</a> </li>
             <li class="nav-item text-center" ><a class="nav-link active ps-4 pe-4"  href="#section2">Tour</a></li>
             <li class="nav-item text-center" ><a class="nav-link active ps-4 pe-4"  href="#section3">Testimonial</a></li>
             <li class="nav-item text-center "><button class="nav-link mx-auto contactlink p-2 " type="button" onclick="location.href='#section4'"  style="border-radius:5px; border:1px #FB8500 solid;background-color:#FB8500;color:#FFFF;" >Contact us</button></li>
@@ -62,9 +62,7 @@
         </div>
       </nav>
 <!-- Home -->
-<div class="home  " style="background-image: url(summer-2880261_1280.jpg);background-position: center;background-size: cover;background-repeat: no-repeat;height: 46rem;">
-  
-    
+<div class="home  " style="background-image: url(summer-2880261_1280.jpg);background-position: center;background-size: cover;background-repeat: no-repeat;height: 46rem;">  
         <div class="hometext container-fluid" style="background-color:black;opacity:70%;height: 46rem; ">
           <h4 class="text-center" style="font-family:Poppins;font-weight: bolder;padding-top:20%;font-size: 37px;background-color:black;color:#FFFF;"><b>Hang on with us on your holidays!</b></h4>
   <h5 class="mt-5 mx-auto" style="font-family:Poppins;background-color:black;color:#FFFF;"><b>"Set Sail for New Horizons"</b></h5>
@@ -83,7 +81,32 @@
               <p style="color:grey">Your gateway to extraordinary adventures and unforgettable experiences around the globe. We are passionate about travel and dedicated to crafting remarkable journeys that inspire and enrich your life.
                 At our agency, we believe that travel has the power to transform, educate, and create lifelong memories.
                 Our team of experienced travel enthusiasts is here to guide you every step of the way.</p></div>
-                <button class="  nav-link ms-5  mt-3 pt-1 pb-1 " type="button" onclick="location.href='#section3'"  style="border-radius:5px; border:1px #FB8500 solid;color:#FB8500;padding-left: 2%;padding-right: 2%;" >View All Tour<i class="fa-solid fa-arrow-right ps-2" style="color: #FB8500;"></i></button>
+                <button class="viewtour nav-link ms-5  mt-3 pt-1 pb-1 " type="button" onclick="location.href='#section3'"  style="border-radius:5px; border:1px #FB8500 solid;color:#FB8500;padding-left: 2%;padding-right: 2%;" >View All Tour
+                  <i class="fa-solid fa-chevron-right ps-1 " style="color: #FB8500;"></i>
+                  <style> 
+                              .fa-chevron-right {
+                    animation: move-right 1s linear infinite;
+                  }
+
+                  @keyframes move-right {
+                    0% {
+                      right: 0;
+                    }
+
+                    50% {
+                      right: 10px;
+                    }
+
+                    100% {
+                      right: 0;
+                    }
+                  }
+
+                  .fa-chevron-right:hover {
+                    animation: move-right 1s linear infinite;
+                  }
+                  </style>
+                </button>
               </div>
           </div>
           </div>
@@ -107,7 +130,7 @@
                   <img src="accomodation_prev_ui.png" class="mb-5 mt-4 ms-3" alt="camera" height="50" width="50">
                   <h5 class="mb-4 ms-3">Accomodation</h5>
                   <p class="p-3" style="line-height: 2;">We offer the best accomodation for our guest. Enjoy your cool holidays with good food and luxurious rooms.</p>
-                  <a href="#" class="Readmore ms-3"  type="submit"onclick="location.href='#section3'">Book now <i class="fa-solid fa-arrow-right ps-1"></i></a>
+                  <a href="accomadation.html" class="Readmore ms-3"  type="submit">Book now <i class="fa-solid fa-arrow-right ps-1"></i></a>
                 </div>
                 
                 
@@ -116,7 +139,7 @@
                   <h5 class="mb-4 ms-3">Car Service</h5>
                   <p class="p-3" style="line-height: 2;">we provide cars for rent arround Pondicherry. The best car service for you on time everytime. </p>
                   
-                  <a href="#" class="Readmore ms-3"  type="submit"onclick="location.href='booking.html'">Book now <i class="fa-solid fa-arrow-right ps-1"></i></a>
+                  <a href="booking.html" class="Readmore ms-3"  type="submit">Book now <i class="fa-solid fa-arrow-right ps-1"></i></a>
                 </div>
                 
                 
@@ -124,7 +147,7 @@
                   <img src="cameragrey_prev_ui.png" class="mb-5 mt-4 ms-3" alt="camera" height="50" width="60">
                   <h5 class="mb-4 ms-3">Camera Service</h5>
                   <p class="p-3" style="line-height: 2;">We offer cameras and drones for rent. Captuere your awesome moments with our rental camera.</p>
-                  <a href="#" id="booking" class="Readmore ms-3"  type="submit"onclick="booking()">Book now<i class="fa-solid fa-arrow-right ps-1"></i></a>
+                  <a href="camera.html " id="booking" class="Readmore ms-3"  type="submit">Book now<i class="fa-solid fa-arrow-right ps-1"></i></a>
                 </div>
                 
               </div>
@@ -213,7 +236,7 @@
                          <div class="row ms-3">
                           <div class="col-lg-6 ">
                             <label style="color: grey;">Service type</label>
-                            <input class=" mb-3 pb-4 pt-4" type="text" placeholder="Tour / Car / Camera"  name="service" required>   
+                            <input class=" mb-3 pb-4 pt-4" type="text" placeholder=""  name="service" required>   
                           </div>
                           <div class="col-lg-6">
                             <label style="color:grey;">Mobile Number</label>
