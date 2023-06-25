@@ -304,10 +304,12 @@ input:focus{
 }
 /* tour */
 .explore{
-    border: 2px #ffff solid;
-    border-radius: 15px;
-    box-shadow: 0 0 10px  rgba(0,0,0,0.19);
-    height:8%;
+    font-family: 'Wix Madefor Display';
+    border: 2px #f4f4f6 solid;
+    background-color: #f4f4f6;
+    border-radius: 50px;
+    /* box-shadow: 0 0 10px  rgba(0,0,0,0.19); */
+    
     width:50%;
     margin-left:25% ;
 }
