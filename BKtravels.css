@@ -313,3 +313,20 @@ input:focus{
     width:50%;
     margin-left:25% ;
 }
+input.empty {
+    font-family: 'Wix Madefor Display',FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color:grey;
+}
+.swiper {
+    margin-top: 5%;
+    text-align: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 25px;
+}
+
+  
+

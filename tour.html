@@ -19,6 +19,10 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
+        <!-- Swipper JS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+          
+
         <!-- Font-style -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,6 +37,8 @@
         </style>
         <!-- JS -->
         <script src="index.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
               <style>
                 @import url('https://fonts.googleapis.com/css2?family=Eczar:wght@800&family=Wix+Madefor+Display&display=swap');
               </style>
@@ -70,7 +76,7 @@
             <div class="aboutsection text-start">
                 <img class="mt-5 " style="position: absolute;right: 6%; z-index: -1;" src="tri2.png" height="60"  width="60">
               <div class=" mt-lg-5 ps-5 pt-5  pe-5 " ><h2 class="mb-4  mt-5" style="color:#FB8500;font-family: 'Poppins',sans-serif;line-height: 1.4;"><b>Discover the best places to to enjoy your vacations!</b></h2>
-                <h6 class="mt-1 ms-2 mx-auto" style="font-family:'Wix Madefor Display';color:grey;"><b>Get into the rue de la France inside India</b></h6>
+                <h6 class="mt-1 ms-2 mx-auto" style="font-family:'Wix Madefor Display';color:grey;">Get into the rue de la France inside India</h6>
                 </div>
                 <img class="ml-auto" style=" z-index: -1;" src="tri1.png" height="60"  width="60">
                   </div>
@@ -82,7 +88,7 @@
             </div>
             <!-- Explore -->
             <div class="container-fluid pt-5 ">
-            <div class="explore  p-2 mt-5 d-none d-lg-block"> 
+            <div class="explore mx-auto p-2 mt-5 d-none d-lg-block"> 
                 <div class="row">
                     <div class="col-sm ms-5"> 
                      <span> <i class="fa-solid fa-location-dot me-2" style="color:#FB8500;"></i>
@@ -93,18 +99,29 @@
                         <option value="2">Pondy Marina</option>
                         <option value="3">Auroville</option>
                       </select></span> 
+                      <style>
+                        select{
+
+                          outline: none;
+                        }
+                        select:focus{
+                          border : 1px solid #f4f4f6;
+                        }
+                      </style>
                 </div>
                 <!-- <span style="border-left:2px solid #cdcdcd; height:40%; " -->
-                <div class="col-sm ms-5">
+                <div class="col-sm ms-3">
                   <i class="fa-solid fa-calendar-days me-2" style="color:#FB8500;"></i>
                   <label style="color:#FB8500; font-weight: bold;">Date</label>
-                  <input type="date" placeholder="Date" style="background-color: #f4f4f6; border: none; width: 80%; height: 50%;">
+                  <input type="text" class="form-control empty"  placeholder="Date    &#xf073;" style="color: grey; background-color: #f4f4f6; border: none; width: 100%; height: 50%; "  onfocus="(this.type='date')"
+                  onblur="(this.type='text')">
+                  <!-- <input type="text" placeholder="Date"> -->
                 </div>
                 
                 <div class="col-sm ms-5">
                   <i class="fa-solid fa-user-group me-2" style="color:#FB8500;"></i>
                   <label style="color:#FB8500; font-weight: bold;">Guest</label>
-                   <input class="ps-4" type="text" placeholder="Count" style=" height: 50%; width:80%; border:none;color:grey; background-color: #f4f4f6;"  required/>
+                   <input class="ps-4" type="text" placeholder="0 " style=" height: 50%; width:80%; border:none;color:grey; background-color: #f4f4f6;"  required/>
                 </div>
                 
                 <div class="col-sm">
@@ -115,14 +132,55 @@
                 </div>
             </div>
             </div>
-          
+            <!-- <img class="me-5 mt-4" src="like_prev_ui.png" id="heart" style="float: right; cursor: pointer; " height="10%" width="10%" onclick="like()"> -->
             <!-- Places-->
-            <div class="places container text-center service mt-5 mb-5"><h4 class="mt-5" style="font-family: 'Poppins',sans-serif; color:#FB8500"><b>Places to visit!</b></h4></div>
+            <div class="places container text-center service mt-5  mb-5"><h4 class="mt-5" style="font-family: 'Poppins',sans-serif; color:#FB8500"><b>Places to visit!</b></h4>
+              <h5 class=" mt-5" style="color: gray;">Enjoy the ride and explore with fun!</h5>
+              <div class="places pt-5">
+                <div class="row">
+                    <div class="col-lg-6 text-center">
+                      <img src="cycle.jpg" height="90%" width="60%">
+                    </div>
+                <div class="col-lg-6 ">
+                  <div class="swiper mySwiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <!-- <div class="swiper-slide" style="border-radius: 50px; width: 300px; background-image: url('white.png');  background-position:center; -->
+                       <!-- background-size: cover;" ><img class="me-5 mt-4" src="like_prev_ui.png" id="heart" style="float: right; cursor: pointer; " height="10%" width="10%" onclick="like()" ondblclick="unlike()"></div> -->
+                      <!-- <div class="swiper-slide" style="border-radius: 25px;"  ><img src="rock (2).png" height="330px" width="320px"></div> -->
+                      <div class="swiper-slide" style="border-radius: 50px; width: 300px; background-image: url('auroville\ \(2\).jpg');  background-position:center;
+                      background-size: cover;" ><img class="me-5 mt-4" src="like_prev_ui.png" id="heart1" style="float: right; cursor: pointer; " height="10%" width="10%" onclick="like1()" ondblclick="unlike1()"></div>
+                                            <div class="swiper-slide" style="border-radius: 50px; width: 300px; background-image: url('memorial_prev_ui.png');  background-position:center;
+                                            background-size: cover;" ><img class="me-5 mt-4" src="like_prev_ui.png" id="heart2" style="float: right; cursor: pointer; " height="10%" width="10%" onclick="like2()" ondblclick="unlike2()"></div>
+                    </div>
+                    <!-- If we need pagination
+                    <div class="swiper-pagination"></div>
+                  
+                    If we need navigation buttons
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div> -->
+                  
+                    <!-- If we need scrollbar -->
+                    <!-- <div class="swiper-scrollbar"></div> -->
+                  </div>
+                  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+                  <script>
+                    const swiper = new Swiper('.mySwiper', {
+                      effect:'cards',pointer:true,
+                  });
+                  
+                  </script>
+                </div>
+              </div>
+            </div>  
+            </div>
       <!-- Footer -->
       <footer class="mt-5 container-fluid" style="background-color: #f4f4f6;color:grey;font-family: 'Wix Madefor Display',sans-serif; height:6rem;">
         <p class="pt-5 ps-5">© 2023 <a href="index.html" style="color:#FB8500;text-decoration: none;"> BK Travels.</a> All Rights Reserved.</p>
       </footer>
-
+<!-- SwipperJS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <!-- Bootstrap cdn -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
