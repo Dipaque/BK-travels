@@ -33,6 +33,15 @@ function unlike(){
         function unlike2(){
           document.getElementById('heart2').src='like_prev_ui.png';
           }
+          function like3(){
+  
+            document.getElementById("heart3").src='unlike_prev_ui.png';
+            
+            }
+            
+            function unlike3(){
+              document.getElementById('heart3').src='like_prev_ui.png';
+              }     
  
 
   
