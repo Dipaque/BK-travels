@@ -84,15 +84,19 @@
                 <button class="viewtour nav-link ms-5  mt-3 pt-1 pb-1 " type="button" onclick="location.href='tour.html'"  style="border-radius:5px; border:1px #FB8500 solid;color:#FB8500;padding-left: 2%;padding-right: 2%;" >View All Tour
                   <i class="fa-solid fa-chevron-right ps-1 pe-2 " style="color: #FB8500;"></i>
                   <style> 
-                              button.viewtour:hover .fa-chevron-right {
-                                transform: translatex(40%);
-                                right: 7px;
-                                transition: all .5s ease-in-out;
-                                }
-                            /* .fa-chevron-right:hover:after{
-                              right: 5px;
-                            
-                            } */
+                              
+                                @keyframes move-right {
+                                  0%   {transform:translateX(0);}
+  
+                                     50%  {transform:translateX(60%);}
+                                          }
+                                          button.viewtour:hover .fa-chevron-right {
+                                            animation-name: move-right;
+                                            animation-duration: 5s;
+                                           
+                                             }
+                                             
+                          
                   </style>
                 </button>
               </div>
@@ -118,25 +122,261 @@
                   <img src="accomodation_prev_ui.png" class="mb-5 mt-4 ms-3" alt="camera" height="50" width="50">
                   <h5 class="mb-4 ms-3">Accomodation</h5>
                   <p class="p-3" style="line-height: 2;">We offer the best accomodation for our guest. Enjoy your cool holidays with good food and luxurious rooms.</p>
-                  <a href="accomadation.html" class="Readmore ms-3"  type="submit">Book now <i class="fa-solid fa-arrow-right ps-1"></i></a>
+                  <button  class="Readmore ms-3"  type="submit" onclick="on2()">Book now <i class="fa-solid fa-arrow-right ps-1"></i></button>
                 </div>
-                
+                <!-- Accomodation -->
+                <div id="overlay2" >
+                  <div id="booking2">
+                    <div class="container   "  >
+                      <i class="fa-solid fa-xmark" style="color:gray; float: right; font-size: 22px;" onclick="off2()"></i>
+                      <style>
+                        i.fa-xmark:hover{
+                          cursor: pointer;
+                          color:rgb(247, 97, 97);
+                        }
+                      </style>
+                      <h5 class="text-center m-2 pt-5 mb-3" style="color:#FB8500; font-family: 'Poppins',sans-serif;"><b>The perfect place to relax and recharge!</b></h5>
+                      <div class="row">
+                              <div class="col-lg-6 mx-auto ">
+                              <img class="  mx-auto " src="2324409_prev_ui.png" height="80%" width="60%"> 
+                              </div>
+                            <div class="col-lg-6 text-start mt-5 pt-2  cabbooking">
+                              <form class="mt-3" action="https://formspree.io/f/xzbqqjej" method="POST">
+                                <div class="row  ps-3 ">
+                                  <div class="col-lg-6 ps-3 ">
+                                  <label style="color: grey;">Name</label>
+                                <input class=" mb-3 pb-4 pt-2" type="text" id="name" placeholder="" name="name" required>
+                                </div>
+                                
+                                <div class="col-lg-6">
+                                <label style="color: grey;">Mobile Number</label>
+                                <input class="mb-3 pb-4 pt-2"type="text" placeholder=""  name="number" required>
+                                </div>
+                                </div>
+                                 <div class="row ps-3">
+                                  <div class="col-lg-6 ">
+                                    <label style="color: grey;">Room Type</label>
+                                    <input class=" mb-3 pb-4 pt-2" type="text" placeholder=""  name="departure" required>   
+                                  </div>
+                                  <div class="col-lg-6">
+                                    <label style="color:grey;">AC/Non AC</label>
+                                    <input class="mb-3 pb-4 pt-2" type="text" placeholder="" name="destination" required>
+                                  </div>
+                                 </div>
+                                 <div class="row ps-3 ">
+                                  <div class="col-lg-6 ">
+                                    <label style="color: grey;">Guest</label>
+                                    <input class=" mb-3 pb-4 pt-2" type="text" placeholder=""  name="cab" required>   
+                                  </div>
+                                  <div class="col-lg-6">
+                                    <label style="color:grey;">Location</label>
+                                    <input class="mb-1 pb-4 pt-2" type="text" placeholder="" name="time" required>
+                                  </div>
+                                 </div>
+                                 <button class="booknow mt-2 mb-3 me-5 " style="float:left; " type="submit">Book now</button>
+                                 <style>
+                                  .booknow{
+                                          outline: none;
+                                          background-color: #FB8500;
+                                          color:white;
+                                          border:2px #FB8500 solid;
+                                          height:3rem;
+                                          width:20%;
+                                          border-radius: 5px;
+                                      }
+                                      @media (max-width:510px) {
+                                          .booknow{
+                                              width:50%;
+                                              
+                                              
+                                          }
+                                      }
+                                      @media (max-width:576px) {
+                                                      .cabbooking{
+                                                      margin-left: 9%;
+                                                      }
+                                                  }
+                                 </style>
+                                </form>
+                            </div>
+                       </div>
+                      </div>
+                  </div>
+                </div>
                 
                 <div class="col-lg m-lg-4 mt-3 mb-5 text-start p-3  elite ps-3">
                   <img src="car_prev_ui.png" class="mb-5 mt-4 ms-3" alt="camera" height="50" width="60">
                   <h5 class="mb-4 ms-3">Car Service</h5>
                   <p class="p-3" style="line-height: 2;">we provide cars for rent arround Pondicherry. The best car service for you on time everytime. </p>
                   
-                  <a href="booking.html" class="Readmore ms-3"  type="submit">Book now <i class="fa-solid fa-arrow-right ps-1"></i></a>
+                  <button class="Readmore ms-3" id="carbook"  type="submit" onclick="on()">Book now <i class="fa-solid fa-arrow-right ps-1"></i>
+                  </button>
                 </div>
-                
+                <!-- Car booking -->
+                <div id="overlay" >
+                <div id="booking">
+                  <div class="container   "  >
+                    <i class="fa-solid fa-xmark" style="color:gray; float: right; font-size: 22px;" onclick="off()"></i>
+                    <style>
+                      i.fa-xmark:hover{
+                        cursor: pointer;
+                        color:rgb(247, 97, 97);
+                      }
+                    </style>
+                    <h5 class="text-center m-2 pt-5 mb-3" style="color:#FB8500; font-family: 'Poppins',sans-serif;"><b>Book your cab online Anywhere Anytime!</b></h5>
+                    <div class="row">
+                            <div class="col-lg-6 mx-auto ">
+                            <img class="  mx-auto " src="3682361.jpg" height="80%" width="60%"> 
+                            </div>
+                          <div class="col-lg-6 text-start mt-5 pt-2  cabbooking">
+                            <form class="mt-3" action="https://formspree.io/f/xzbqqjej" method="POST">
+                              <div class="row  ps-3 ">
+                                <div class="col-lg-6 ps-3 ">
+                                <label style="color: grey;">Name</label>
+                              <input class=" mb-3 pb-4 pt-2" type="text" id="name" placeholder="" name="name" required>
+                              </div>
+                              
+                              <div class="col-lg-6">
+                              <label style="color: grey;">Mobile Number</label>
+                              <input class="mb-3 pb-4 pt-2"type="text" placeholder=""  name="number" required>
+                              </div>
+                              </div>
+                               <div class="row ps-3">
+                                <div class="col-lg-6 ">
+                                  <label style="color: grey;">Departure</label>
+                                  <input class=" mb-3 pb-4 pt-2" type="text" placeholder=""  name="departure" required>   
+                                </div>
+                                <div class="col-lg-6">
+                                  <label style="color:grey;">Destination</label>
+                                  <input class="mb-3 pb-4 pt-2" type="text" placeholder="" name="destination" required>
+                                </div>
+                               </div>
+                               <div class="row ps-3 ">
+                                <div class="col-lg-6 ">
+                                  <label style="color: grey;">Cab</label>
+                                  <input class=" mb-3 pb-4 pt-2" type="text" placeholder=""  name="cab" required>   
+                                </div>
+                                <div class="col-lg-6">
+                                  <label style="color:grey;">Time</label>
+                                  <input class="mb-1 pb-4 pt-2" type="text" placeholder="" name="time" required>
+                                </div>
+                               </div>
+                               <button class="booknow mt-2 mb-3 me-5 " style="float:left; " type="submit">Book now</button>
+                               <style>
+                                .booknow{
+                                        outline: none;
+                                        background-color: #FB8500;
+                                        color:white;
+                                        border:2px #FB8500 solid;
+                                        height:3rem;
+                                        width:20%;
+                                        border-radius: 5px;
+                                    }
+                                    @media (max-width:510px) {
+                                        .booknow{
+                                            width:50%;
+                                            
+                                            
+                                        }
+                                    }
+                                    @media (max-width:576px) {
+                                                    .cabbooking{
+                                                    margin-left: 9%;
+                                                    }
+                                                }
+                               </style>
+                              </form>
+                          </div>
+                     </div>
+                    </div>
+                </div>
+              </div>
                 
                 <div class="col-lg m-lg-4 mt-3 mb-5 text-start p-3  elite ps-3">
                   <img src="cameragrey_prev_ui.png" class="mb-5 mt-4 ms-3" alt="camera" height="50" width="60">
                   <h5 class="mb-4 ms-3">Camera Service</h5>
                   <p class="p-3" style="line-height: 2;">We offer cameras and drones for rent. Captuere your awesome moments with our rental camera.</p>
-                  <a href="camera.html " id="booking" class="Readmore ms-3"  type="submit">Book now<i class="fa-solid fa-arrow-right ps-1"></i></a>
+                  <button href=" "  class="Readmore ms-3"  type="submit" onclick="on1()">Book now<i class="fa-solid fa-arrow-right ps-1"></i></button>
                 </div>
+                <!-- Camera booking -->
+                <div id="overlay1" >
+                <div id="booking1">
+                  <div class="container   "  >
+                    <i class="fa-solid fa-xmark" style="color:gray; float: right; font-size: 22px;" onclick="off1()"></i>
+                    <style>
+                      i.fa-xmark:hover{
+                        cursor: pointer;
+                        color:rgb(247, 97, 97);
+                      }
+                    </style>
+                    <h5 class="text-center m-2 pt-5 mb-3" style="color:#FB8500; font-family: 'Poppins',sans-serif;"><b>Capture your memorable moments with our camera's!</b></h5>
+                    <div class="row">
+                            <div class="col-lg-6 mx-auto ">
+                            <img class="  mx-auto " src="Camera_prev_ui.png" height="90%" width="60%"> 
+                            </div>
+                          <div class="col-lg-6 text-start mt-5 pt-2  cabbooking">
+                            <form class="mt-3" action="https://formspree.io/f/xzbqqjej" method="POST">
+                              <div class="row  ps-3 ">
+                                <div class="col-lg-6 ps-3 ">
+                                <label style="color: grey;">Name</label>
+                              <input class=" mb-3 pb-4 pt-2" type="text" id="name" placeholder="" name="name" required>
+                              </div>
+                              
+                              <div class="col-lg-6">
+                              <label style="color: grey;">Mobile Number</label>
+                              <input class="mb-3 pb-4 pt-2"type="text" placeholder=""  name="number" required>
+                              </div>
+                              </div>
+                               <div class="row ps-3">
+                                <div class="col-lg-6 ">
+                                  <label style="color: grey;">Model</label>
+                                  <input class=" mb-3 pb-4 pt-2" type="text" placeholder=""  name="departure" required>   
+                                </div>
+                                <div class="col-lg-6">
+                                  <label style="color:grey;">lens</label>
+                                  <input class="mb-3 pb-4 pt-2" type="text" placeholder="" name="destination" required>
+                                </div>
+                               </div>
+                               <div class="row ps-3 ">
+                                <div class="col-lg-6 ">
+                                  <label style="color: grey;">Variant</label>
+                                  <input class=" mb-3 pb-4 pt-2" type="text" placeholder=""  name="cab" required>   
+                                </div>
+                                <div class="col-lg-6">
+                                  <label style="color:grey;">Time</label>
+                                  <input class="mb-1 pb-4 pt-2" type="text" placeholder="" name="time" required>
+                                </div>
+                               </div>
+                               <button class="booknow mt-2 mb-3 me-5 " style="float:left; " type="submit">Book now</button>
+                               <style>
+                                .booknow{
+                                        outline: none;
+                                        background-color: #FB8500;
+                                        color:white;
+                                        border:2px #FB8500 solid;
+                                        height:3rem;
+                                        width:20%;
+                                        border-radius: 5px;
+                                    }
+                                    @media (max-width:510px) {
+                                        .booknow{
+                                            width:50%;
+                                            
+                                            
+                                        }
+                                    }
+                                    @media (max-width:576px) {
+                                                    .cabbooking{
+                                                    margin-left: 9%;
+                                                    }
+                                                }
+                               </style>
+                              </form>
+                          </div>
+                     </div>
+                    </div>
+                </div>
+              </div>
                 
               </div>
             </div>

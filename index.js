@@ -18,7 +18,7 @@ function unlike(){
   function like1(){
   let count=0
     document.getElementById("heart1").src='unlike_prev_ui.png';
-   return  count+1;
+   count= count+1;
     }
     
     function unlike1(){
@@ -42,8 +42,29 @@ function unlike(){
             function unlike3(){
               document.getElementById('heart3').src='like_prev_ui.png';
               }     
- 
-
-  
+              function on() {
+                document.getElementById("overlay").style.display = "block";
+              }
+              
+              function off() {
+                document.getElementById("overlay").style.display = "none";
+              }
+              function on1() {
+                document.getElementById("overlay1").style.display = "block";
+              }
+              
+              function off1() {
+                document.getElementById("overlay1").style.display = "none";
+              }
+              function on2() {
+                document.getElementById("overlay2").style.display = "block";
+              }
+              
+              function off2() {
+                document.getElementById("overlay2").style.display = "none";
+              }
+          
+              
+              
   
   
