@@ -10,7 +10,9 @@ body{
     box-shadow: none;
 }
 
-    
+.navbar-nav > .active > a {
+    color: #FB8500;
+} 
 .home{
     font-family: 'Wix Madefor Display', sans-serif;
     background-position: center;
@@ -422,6 +424,11 @@ input.empty {
   height: 270px;
   border-radius: 25px;
 }
-
+.booktour{
+    border:1px solid #FB8500;
+    border-radius: 8px;
+    width:50%;
+    height:90%;
+}
   
 

@@ -45,6 +45,7 @@
               <link rel="preconnect" href="https://fonts.googleapis.com">
               <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
               <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@800&family=Poppins:wght@700&family=Wix+Madefor+Display&display=swap" rel="stylesheet">
+        
     </head>
     <body>
         
@@ -57,7 +58,7 @@
             </button>
           <div class="collapse navbar-collapse" id="mynavbar">
             <ul class="navbar-nav navlink ms-auto mt-2 mt-md-0 ">
-              <li class="nav-item text-center"><a class="nav-link active  ps-4 pe-4 " href="index.html">Home</a></li>
+              <li class="nav-item text-center"><a class="nav-link active  ps-4 pe-4 " href="index.html" id="home" >Home</a></li>
               <li class="nav-item text-center "><a class="nav-link  ps-4 pe-4 " href="index.html#section0">Who we are?</a></li>
             <li class="nav-item text-center" ><a class="nav-link  ps-4 pe-4"  href="index.html#section1">What we do?</a> </li>
             <li class="nav-item text-center" ><a class="nav-link  ps-4 pe-4"  href="tour.html">Tour</a></li>
@@ -93,46 +94,31 @@
                     <div class="col-sm mt-2 ms-5"> 
                      <span> <i class="fa-solid fa-location-dot me-2" style="color:#FB8500;"></i>
                       <label style="color:#FB8500; font-weight: bold;">Location</label>
-                      <select class="form-select form-select-sm ps-3" aria-label=".form-select-sm example" style="color: grey; background-color: #f4f4f6;  border: none; font-family: 'Wix Madefor Display'; width: 90%;">
-                        <option selected style="font-family: 'Wix Madefor Display';">Location</option>
-                        <option value="1">Rock Beach</option>
-                        <option value="2">Pondy Marina</option>
-                        <option value="3">Auroville</option>
-                      </select></span> 
-                      <style>
-                        select{
-
-                          outline: none;
-                        }
-                        select:focus{
-                          border : 1px solid #f4f4f6;
-                        }
-                      </style>
+                      <input type="text" class=" empty" id="getLocation" placeholder="Location    &#xf041;" style="color: grey; background-color: #f4f4f6; border: none; width: 100%; height: 50%; ">
                 </div>
-                <!-- <span style="border-left:2px solid #cdcdcd; height:40%; " -->
+                
                 <div class="col-sm mt-2 ms-3">
                   <i class="fa-solid fa-calendar-days me-2" style="color:#FB8500;"></i>
                   <label style="color:#FB8500; font-weight: bold;">Date</label>
-                  <input type="text" class="form-control empty"  placeholder="Date    &#xf073;" style="color: grey; background-color: #f4f4f6; border: none; width: 100%; height: 50%; "  onfocus="(this.type='date')"
+                  <input type="text" class="form-control empty" id="getdate" placeholder="Date    &#xf073;" style="color: grey; background-color: #f4f4f6; border: none; width: 100%; height: 50%; " onfocus="(this.type='date')"
                   onblur="(this.type='text')">
-                  <!-- <input type="text" placeholder="Date"> -->
+            
                 </div>
                 
                 <div class="col-sm mt-2 ms-5">
                   <i class="fa-solid fa-user-group me-2" style="color:#FB8500;"></i>
                   <label style="color:#FB8500; font-weight: bold;">Guest</label>
-                   <input class="ps-4 form-control empty" type="text " placeholder="0 &#xf500;" style=" height: 50%; width:80%; border:none;color:grey; background-color: #f4f4f6;"  required/>
+                   <input class="ps-4 form-control empty" type="text" id="guest" placeholder="0 &#xf500;" style=" height: 50%; width:80%; border:none;color:grey; background-color: #f4f4f6;"  required/>
                 </div>
                 
                 <div class="col-sm">
-                <button class="explorebtn p-3  mx-auto"  style="border-radius:50px; float: right;  border:1px #FB8500 solid;background-color:#FB8500;color:#FFFF; height: 100%; width: 100%;" onclick="myfunc()">
+                <button class="explorebtn p-3  mx-auto"  style="border-radius:50px; float: right;  border:1px #FB8500 solid;background-color:#FB8500;color:#FFFF; height: 100%; width: 100%;" onclick="explore()">
                     Explore Now
                 </button>
                 </div>
                 </div>
             </div>
-            </div>
-            <!-- <img class="me-5 mt-4" src="like_prev_ui.png" id="heart" style="float: right; cursor: pointer; " height="10%" width="10%" onclick="like()"> -->
+          </div>
             <!-- Places-->
             <div class="places container text-center service mt-5  mb-5">
               <div class="places pt-5">
@@ -159,9 +145,8 @@
                       <img class="" src="like_prev_ui.png" id="heart3" style="margin-top: 75%;margin-right: 12%; float: right; cursor: pointer; " height="7%" width="7%" onclick="like3()" ondblclick="unlike3()">
                       <h6 style="font-family: 'Wix Madefor Display'; color: #ffff;margin-top:75%; font-weight: 500; float: left; margin-left: 15%;">War Memorial</h6>
                     </div>
-                    <!-- <p>Swipe left or right</p> -->
                   </div>
-                  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
                   <script>
                     const swiper = new Swiper('.mySwiper', {
                       effect:'cards',pointer:true,
@@ -170,8 +155,106 @@
                 </div>
               </div>
             </div>  
-            </div>
-            </div>
+          </div>
+        </div>
+        <!-- Booking -->
+        <div class="container service mt-5 " >
+          <h5 class="text-center m-2 pt-5 mb-3" style="color:#FB8500; font-family: 'Poppins',sans-serif;"><b>Share your tour plan with us!</b></h5>
+          <p class=" text-center mt-4 mb-5" style="color:grey; font-size: larger;">Give us a chance to make it happen <i class="fa-solid fa-leaf ms-2"></i></p>
+          <div class="row">
+                  <div class="col-lg-6 mx-auto mt-3 ">
+                  <img class=" ms-5 mt-5 mx-auto " src="cycle.jpg" height="60%" width="70%"> 
+                  </div>
+                <div class="col-lg-6 text-start mt-5 pt-2  cabbooking">
+                  <form class="mt-3" action="https://formspree.io/f/xzbqqjej" method="POST">
+                    <div class="row ">
+                      <div class="col-lg-6 ps-3 ">
+                      <label style="color: grey;">Name</label>
+                    <input class=" mb-3 pb-4 pt-4" type="text" id="name" placeholder="" name="name" required>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                    <label style="color: grey;">Mobile Number</label>
+                    <input class="mb-3 pb-4 pt-4"type="text" placeholder=""  name="number" required>
+                    </div>
+                    </div>
+                    <div class="row ">
+                      <div class="col-lg-6 ">
+                        <label style="color: grey;">Location</label>
+                        <input class=" mb-3 pb-4 pt-4" type="text" id="locate"  name="Location" required>   
+                      </div>
+                      <div class="col-lg-6">
+                        <label style="color:grey;">Start Date</label>
+                        <input type="text" class="empty mb-3 pb-4 pt-4" id="newdate" placeholder="Date    &#xf073;"  onfocus="(this.type='date')"
+                  onblur="(this.type='text')" name="data">
+                      </div>
+                     </div>
+                     <div class="row ">
+                      <div class="col-lg-6 ">
+                          <select class=" mb-3 mt-3 pb-5 " style="color: grey; background-color: #ffff; border:none; border-radius: none; border-bottom:1px solid grey; font-family: 'Wix Madefor Display'; width: 75%;">
+                        <option selected style="font-family: 'Wix Madefor Display';">Tour Packages</option>
+                        <option id="option" value="1">Silver</option>
+                        <option value="2">Elite</option>
+                        <option value="3">Premium</option>
+                      </select>  
+                      </div>
+                      <div class="col-lg-6">
+                        <select class=" mb-3 mt-3 pb-5 " style="color: grey; background-color: #ffff; border:none; border-radius: none; border-bottom:1px solid grey; font-family: 'Wix Madefor Display'; width: 75%;">
+                          <option selected style="font-family: 'Wix Madefor Display';">Plan Type</option>
+                          <option id="option" value="1">Business</option>
+                          <option value="2">School/College</option>
+                          <option value="3">Family vacation</option>
+                          <option value="4">Honey moon</option>
+                          <option value="5">Casual vacation</option>
+                        </select>
+                      </div>
+                     </div>
+                     <div class="row ">
+                      <div class="col-lg-6 ">
+                        <label class="mt-4" style="color: grey;">No of Days</label>
+                        <input class=" mb-3 pb-4 pt-4" type="text" placeholder=""  name="days" required>   
+                      </div>
+                      <div class="col-lg-6">
+                        <label class="mt-4" style="color:grey;">No of Guest</label>
+                        <input class="mb-3 pb-4 pt-4" id="guestcount" type="text" placeholder="" name="guest" required>
+                      </div>
+                     </div>
+                  
+                     <button class="tourbook mt-2 me-5 mb-5 "  style="float:left;" type="submit">Book now</button>
+                     <style>
+                      .tourbook{
+                              outline: none;
+                              background-color: #FFFF;
+                              color:#FB8500;
+                              border:2px #FB8500 solid;
+                              height:3rem;
+                              width:20%;
+                              border-radius: 5px;
+                          }
+                          .tourbook:hover{
+                              outline: none;
+                              background-color: #FB8500;
+                              color:white;
+                              border:2px #FB8500 solid;
+                          }
+                          @media (max-width:510px) {
+                              .tourbook{
+                                  width:30%;
+                              }
+                          }
+                          @media (max-width:576px) {
+                                          .cabbooking{
+                                          margin-left: 9%;
+                                          }
+                                      }
+                                  
+                     </style>
+                    </form>
+                </div>
+           </div>
+          </div>
+
+        </div>
       <!-- Footer -->
       <footer class="mt-5 container-fluid" style="background-color: #f4f4f6;color:grey;font-family: 'Wix Madefor Display',sans-serif; height:6rem;">
         <p class="pt-5 ps-5">© 2023 <a href="index.html" style="color:#FB8500;text-decoration: none;"> BK Travels.</a> All Rights Reserved.</p>
