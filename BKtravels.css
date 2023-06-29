@@ -22,9 +22,21 @@ body{
     text-align: center;
 }
 .contactlink{
-    border-radius:5px;
+    border-radius:25px;
      border:1px #FB8500 solid;
-    background-color: black;
+    background-color: #FFFF;
+    color:#FB8500;
+    font-size: medium;
+}
+.contactlink1{
+    border-radius:25px;
+     border:1px #FB8500 solid;
+    background-color: #FB8500;
+    color:#ffff;
+    font-size: medium;
+}
+.contactlink1:hover{
+    background-color: #ffff;
     color:#FB8500;
 }
 .contactlink:hover{

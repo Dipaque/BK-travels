@@ -71,8 +71,8 @@ document.getElementById('guestcount').value=count;
 let loc=document.getElementById('getLocation').value;
 console.log(loc);
 document.getElementById('locate').value=loc;
-}   
-          
+}  
+     
               
               
   

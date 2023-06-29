@@ -62,8 +62,9 @@
               <li class="nav-item text-center "><a class="nav-link  ps-4 pe-4 " href="index.html#section0">Who we are?</a></li>
             <li class="nav-item text-center" ><a class="nav-link  ps-4 pe-4"  href="index.html#section1">What we do?</a> </li>
             <li class="nav-item text-center" ><a class="nav-link  ps-4 pe-4"  href="tour.html">Tour</a></li>
+            <li class="nav-item text-center " ><a class="nav-link  ps-4 pe-4 "  href="fleet.html" >Our Fleet</a></li>
             <li class="nav-item text-center" ><a class="nav-link  ps-4 pe-4 d-none d-lg-block"  href="index.html#section3">Testimonial</a></li>
-            <li class="nav-item text-center "><button class="nav-link mx-auto contactlink p-2 " type="button" onclick="location.href='#section4'"  style="border-radius:5px; border:1px #FB8500 solid;background-color:#FB8500;color:#FFFF;" >Contact us</button></li>
+            <li class="nav-item text-center "><button class="nav-link mx-auto contactlink p-2 " type="button" onclick="location.href='index.html#section4'"  style="border-radius:5px; border:1px #FB8500 solid;background-color:#FB8500;color:#FFFF;" >Contact us</button></li>
             </ul>
           </div>
         </div>
@@ -100,7 +101,7 @@
                 <div class="col-sm mt-2 ms-3">
                   <i class="fa-solid fa-calendar-days me-2" style="color:#FB8500;"></i>
                   <label style="color:#FB8500; font-weight: bold;">Date</label>
-                  <input type="text" class="form-control empty" id="getdate" placeholder="Date    &#xf073;" style="color: grey; background-color: #f4f4f6; border: none; width: 100%; height: 50%; " onfocus="(this.type='date')"
+                  <input type="text" class=" empty" id="getdate" placeholder="Date    &#xf073;" style="color: grey; background-color: #f4f4f6; border: none; width: 100%; height: 50%; " onfocus="(this.type='date')"
                   onblur="(this.type='text')">
             
                 </div>
@@ -108,7 +109,7 @@
                 <div class="col-sm mt-2 ms-5">
                   <i class="fa-solid fa-user-group me-2" style="color:#FB8500;"></i>
                   <label style="color:#FB8500; font-weight: bold;">Guest</label>
-                   <input class="ps-4 form-control empty" type="text" id="guest" placeholder="0 &#xf500;" style=" height: 50%; width:80%; border:none;color:grey; background-color: #f4f4f6;"  required/>
+                   <input class="ps-4  empty" type="text" id="guest" placeholder="0 &#xf500;" style=" height: 50%; width:80%; border:none;color:grey; background-color: #f4f4f6;"  required/>
                 </div>
                 
                 <div class="col-sm">
@@ -191,15 +192,15 @@
                      </div>
                      <div class="row ">
                       <div class="col-lg-6 ">
-                          <select class=" mb-3 mt-3 pb-5 " style="color: grey; background-color: #ffff; border:none; border-radius: none; border-bottom:1px solid grey; font-family: 'Wix Madefor Display'; width: 75%;">
-                        <option selected style="font-family: 'Wix Madefor Display';">Tour Packages</option>
+                          <select class=" mb-3 mt-3 pb-5 " name="Package" style="color: grey; background-color: #ffff; border:none; border-radius: none; border-bottom:1px solid grey; font-family: 'Wix Madefor Display'; width: 75%;">
+                        <option selected style="font-family: 'Wix Madefor Display';" >Tour Packages</option>
                         <option id="option" value="1">Silver</option>
                         <option value="2">Elite</option>
                         <option value="3">Premium</option>
                       </select>  
                       </div>
                       <div class="col-lg-6">
-                        <select class=" mb-3 mt-3 pb-5 " style="color: grey; background-color: #ffff; border:none; border-radius: none; border-bottom:1px solid grey; font-family: 'Wix Madefor Display'; width: 75%;">
+                        <select class=" mb-3 mt-3 pb-5 " name="Type" style="color: grey; background-color: #ffff; border:none; border-radius: none; border-bottom:1px solid grey; font-family: 'Wix Madefor Display'; width: 75%;">
                           <option selected style="font-family: 'Wix Madefor Display';">Plan Type</option>
                           <option id="option" value="1">Business</option>
                           <option value="2">School/College</option>
