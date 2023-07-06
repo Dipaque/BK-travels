@@ -3,12 +3,18 @@ body{
     margin: 0;
     padding: 0;
 }
-.navbar-toggler:focus,
-.navbar-toggler:active,
-.navbar-toggler-icon:focus {
+.navbar-light .navbar-toggler {
+    border:0 solid #ffff;
+  }
+ .navbar-light .navbar-toggler:focus,
+.navbar-light .navbar-toggler:active,
+.navbar-light .navbar-toggler-icon:focus {
     outline: none;
     box-shadow: none;
 }
+  svg{
+    transform: rotate(180deg);
+  }
 
 .navbar-nav > .active > a {
     color: #FB8500;
@@ -43,9 +49,7 @@ body{
     background-color: #FB8500;
     color:white;
 }
-
-  
- .offcanvas-body> .navbar-nav > .active > .a {
+.offcanvas-body> .navbar-nav > .active > .a {
   
     color: #FB8500;
   
@@ -463,7 +467,7 @@ border: solid 2px rgba(0,0,0,0.4);
 border-radius: 15px;
 background-color: rgba(0,0,0,0.4);
 width: 250px;
-height: 250px;
+height: 300px;
 background-image: url('auroville.jpg') ;
 background-position: center;
 background-size: cover;
@@ -486,7 +490,7 @@ background-repeat: no-repeat;
         border-radius: 15px;
         background-color: rgba(0,0,0,0.4);
         width: 250px;
-        height: 250px;
+        height: 300px;
         background-image: url('auroville.jpg') ;
         background-position: center;
         background-size: cover;
