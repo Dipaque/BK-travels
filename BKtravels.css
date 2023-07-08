@@ -3,20 +3,27 @@ body{
     margin: 0;
     padding: 0;
 }
-.navbar-light .navbar-toggler {
+.navbar .navbar-toggler {
     border:0 solid #ffff;
   }
- .navbar-light .navbar-toggler:focus,
-.navbar-light .navbar-toggler:active,
-.navbar-light .navbar-toggler-icon:focus {
+ .navbar .navbar-toggler:focus,
+.navbar .navbar-toggler:active,
+.navbar .navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    
+}
+.navbar .offcanvas .offcanvas-header .btn-close:focus,
+.navbar .offcanvas .offcanvas-header .btn-close:active
+ {
     outline: none;
     box-shadow: none;
 }
-  svg{
+  .navicon{
     transform: rotate(180deg);
   }
 
-.navbar-nav > .active > a {
+.collapse .navbar-nav  .active  a {
     color: #FB8500;
 } 
 .home{
