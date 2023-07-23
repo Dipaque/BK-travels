@@ -69,7 +69,7 @@
             <li class="nav-item text-center " ><a class="nav-link  ps-4 pe-4 "  href="fleet.html" >Our Fleet</a></li>
             <li class="nav-item text-center " ><a class="nav-link  ps-4 pe-4"  href="#section3">Testimonial</a></li>
             <li class="nav-item text-center "><button class="nav-link mx-auto contactlink p-2" type="button" onclick="location.href='#section4'"  style="border-radius:5px; border:1px #FB8500 solid;background-color:#FB8500;color:#FFFF;" >Contact us</button></li>
-            <li class="nav-item text-center ms-2"><button class="btn mx-auto nav-link p-0 mt-2 mt-md-2" id="themebtn" onclick="darkModeToggle()" style=" border:2px solid grey;
+            <li class="nav-item text-center ms-2"><button class="btn mx-auto nav-link p-0 mt-2 mt-md-1" id="themebtn" onclick="darkModeToggle()" style=" border:2px solid grey;
               border-radius: 25px;
               width:50px;
               height: 30px;"><i id="icon" class="fa-solid fa-moon ms-2" style="transition: .5s ease-in;float: left;"></i></button></li>
@@ -160,32 +160,32 @@
                                 <div class="row  ps-3 ">
                                   <div class="col-lg-6 ps-3 ">
                                   <label style="color: grey;">Name</label>
-                                <input class=" mb-3 pb-4 pt-2" type="text" id="name" placeholder="" name="name" required>
+                                <input id="aname" class=" mb-3 pb-4 pt-2" type="text" id="name" placeholder="" name="name" required>
                                 </div>
                                 
                                 <div class="col-lg-6">
                                 <label style="color: grey;">Mobile Number</label>
-                                <input class="mb-3 pb-4 pt-2"type="text" placeholder=""  name="number" required>
+                                <input id="anum" class="mb-3 pb-4 pt-2"type="text" placeholder=""  name="number" required>
                                 </div>
                                 </div>
                                  <div class="row ps-3">
                                   <div class="col-lg-6 ">
                                     <label style="color: grey;">Room Type</label>
-                                    <input class=" mb-3 pb-4 pt-2" type="text" placeholder=""  name="departure" required>   
+                                    <input id="atype" class=" mb-3 pb-4 pt-2" type="text" placeholder=""  name="departure" required>   
                                   </div>
                                   <div class="col-lg-6">
                                     <label style="color:grey;">AC/Non AC</label>
-                                    <input class="mb-3 pb-4 pt-2" type="text" placeholder="" name="destination" required>
+                                    <input id="acac" class="mb-3 pb-4 pt-2" type="text" placeholder="" name="destination" required>
                                   </div>
                                  </div>
                                  <div class="row ps-3 ">
                                   <div class="col-lg-6 ">
                                     <label style="color: grey;">Guest</label>
-                                    <input class=" mb-3 pb-4 pt-2" type="text" placeholder=""  name="cab" required>   
+                                    <input id="aguest" class=" mb-3 pb-4 pt-2" type="text" placeholder=""  name="guest" required>   
                                   </div>
                                   <div class="col-lg-6">
                                     <label style="color:grey;">Location</label>
-                                    <input class="mb-1 pb-4 pt-2" type="text" placeholder="" name="time" required>
+                                    <input id="aloc" class="mb-1 pb-4 pt-2" type="text" placeholder="" name="loc" required>
                                   </div>
                                  </div>
                                  <button class="booknow mt-2 ms-3 mb-3 me-5 " style="float:left; " type="submit">Book now</button>
@@ -248,28 +248,28 @@
                               <div class="row  ps-3 ">
                                 <div class="col-lg-6 ps-3 ">
                                 <label style="color: grey;">Name</label>
-                              <input class=" mb-3 pb-4 pt-2" type="text" id="name" placeholder="" name="name" required>
+                              <input id="cabname" class=" mb-3 pb-4 pt-2" type="text" id="name" placeholder="" name="name" required>
                               </div>
                               
                               <div class="col-lg-6">
                               <label style="color: grey;">Mobile Number</label>
-                              <input class="mb-3 pb-4 pt-2"type="text" placeholder=""  name="number" required>
+                              <input id="cabnum" class="mb-3 pb-4 pt-2"type="text" placeholder=""  name="number" required>
                               </div>
                               </div>
                                <div class="row ps-3">
                                 <div class="col-lg-6 ">
                                   <label style="color: grey;">Departure</label>
-                                  <input class=" mb-3 pb-4 pt-2" type="text" placeholder=""  name="departure" required>   
+                                  <input id="cabdep" class=" mb-3 pb-4 pt-2" type="text" placeholder=""  name="departure" required>   
                                 </div>
                                 <div class="col-lg-6">
                                   <label style="color:grey;">Destination</label>
-                                  <input class="mb-3 pb-4 pt-2" type="text" placeholder="" name="destination" required>
+                                  <input id="cabdes" class="mb-3 pb-4 pt-2" type="text" placeholder="" name="destination" required>
                                 </div>
                                </div>
                                <div class="row ps-3 ">
                                 <div class="col-lg-6 ">
-                                  <select class=" mb-3  pb-5  " style="color: grey; background-color: #ffff; border:none; border-radius: none; border-bottom:1px solid grey; font-family: 'Wix Madefor Display'; width: 75%;">
-                                    <option selected style="font-family: 'Wix Madefor Display';" name="vehicle">Car</option>
+                                  <select id="cabchoice"  class=" mb-3  pb-5  " style="color: grey; background-color: #ffff; border:none; border-radius: none; border-bottom:1px solid grey; font-family: 'Wix Madefor Display'; width: 75%;">
+                                    <option  selected style="font-family: 'Wix Madefor Display';" name="vehicle">Car</option>
                                     <option id="option" value="1">BMW</option>
                                     <option value="2">Benz</option>
                                     <option value="3">xuv500</option>
@@ -285,7 +285,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                   <label style="color:grey;">Time</label>
-                                  <input class="mb-1 pb-4 pt-2" type="text" placeholder="" name="time" required>
+                                  <input id="cabtime" class="mb-1 pb-4 pt-2" type="text" placeholder="" name="time" required>
                                 </div>
                                </div>
                                <button class="booknow mt-2 ms-3 mb-3 me-5 " style="float:left; " type="submit">Book now</button>
@@ -339,39 +339,39 @@
                     <h5 class="text-center m-2 pt-5 mb-3" style="color:#FB8500; font-family: 'Poppins',sans-serif;"><b>Capture your memorable moments with our camera's!</b></h5>
                     <div class="row">
                             <div class="col-lg-6 mx-auto ">
-                            <img class="img-fluid mt-5  mx-auto " src="Camera_prev_ui.png" height="90%" width="80%"> 
+                            <img  class="img-fluid mt-5  mx-auto " src="Camera_prev_ui.png" height="90%" width="80%"> 
                             </div>
                           <div class="col-lg-6 text-start mt-5 pt-2  cabbooking">
                             <form class="mt-3" action="https://formspree.io/f/xzbqqjej" method="POST">
                               <div class="row  ps-3 ">
                                 <div class="col-lg-6 ps-3 ">
                                 <label style="color: grey;">Name</label>
-                              <input class=" mb-3 pb-4 pt-2" type="text" id="name" placeholder="" name="name" required>
+                              <input id="camname" class=" mb-3 pb-4 pt-2" type="text" id="name" placeholder="" name="name" required>
                               </div>
                               
                               <div class="col-lg-6">
                               <label style="color: grey;">Mobile Number</label>
-                              <input class="mb-3 pb-4 pt-2"type="text" placeholder=""  name="number" required>
+                              <input id="camnum" class="mb-3 pb-4 pt-2"type="text" placeholder=""  name="number" required>
                               </div>
                               </div>
                                <div class="row ps-3">
                                 <div class="col-lg-6 ">
                                   <label style="color: grey;">Model</label>
-                                  <input class=" mb-3 pb-4 pt-2" type="text" placeholder=""  name="departure" required>   
+                                  <input id="cammodel" class=" mb-3 pb-4 pt-2" type="text" placeholder=""  name="model" required>   
                                 </div>
                                 <div class="col-lg-6">
                                   <label style="color:grey;">Lens</label>
-                                  <input class="mb-3 pb-4 pt-2" type="text" placeholder="" name="destination" required>
+                                  <input id="camlens" class="mb-3 pb-4 pt-2" type="text" placeholder="" name="lens" required>
                                 </div>
                                </div>
                                <div class="row ps-3 ">
                                 <div class="col-lg-6 ">
                                   <label style="color: grey;">Variant</label>
-                                  <input class=" mb-3 pb-4 pt-2" type="text" placeholder=""  name="cab" required>   
+                                  <input id="camvariant" class=" mb-3 pb-4 pt-2" type="text" placeholder=""  name="variant" required>   
                                 </div>
                                 <div class="col-lg-6">
                                   <label style="color:grey;">Time</label>
-                                  <input class="mb-1 pb-4 pt-2" type="text" placeholder="" name="time" required>
+                                  <input id="camtime" class="mb-1 pb-4 pt-2" type="text" placeholder="" name="time" required>
                                 </div>
                                </div>
                                <button class="booknow mt-2 ms-3 mb-3 me-5 " style="float:left; " type="submit">Book now</button>

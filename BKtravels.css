@@ -398,7 +398,7 @@ input:focus {
 
 .cabbooking {
     font-family: 'Wix Madefor Display', sans-serif;
-    border: 2px solid #ffff;
+    border: 2px solid transparent;
     color: white;
     height: 25%;
     width: 25%;
@@ -406,7 +406,7 @@ input:focus {
     border-radius: 5px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
-    border-left-color: #ffff;
+    border-left-color: transparent;
 }
 
 .booknow {
