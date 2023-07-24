@@ -5,42 +5,6 @@ $(document).ready(function () {
     $(this).addClass("active");
   });
 });
-
-function like() {
-
-  let a = document.querySelector("#slide1")
-
-}
-
-function unlike() {
-  document.getElementById('heart').src = 'like_prev_ui.png';
-}
-function like1() {
-  let count = 0
-  document.getElementById("heart1").src = 'unlike_prev_ui.png';
-  count = count + 1;
-}
-
-function unlike1() {
-  document.getElementById('heart1').src = 'like_prev_ui.png';
-}
-function like2() {
-
-  document.getElementById("heart2").src = 'unlike_prev_ui.png';
-}
-
-function unlike2() {
-  document.getElementById('heart2').src = 'like_prev_ui.png';
-}
-function like3() {
-
-  document.getElementById("heart3").src = 'unlike_prev_ui.png';
-
-}
-
-function unlike3() {
-  document.getElementById('heart3').src = 'like_prev_ui.png';
-}
 function on() {
   document.getElementById("overlay").style.display = "block";
 }
@@ -205,12 +169,5 @@ darkModeToggle = () => {
     elite2.style.backgroundColor = "#f4f4f6";
   }
 }
-localStorage.setItem("darkMode",darkModeToggle);
-var darkModeEnable=localStorage.getItem("darkMode");
-console.log(darkModeEnable)
-if(darkModeEnable==="true"){
-  console.log("true")
-}
-else{
-  console.log("false")
-}
+
+
