@@ -54,9 +54,8 @@ darkModeToggle = () => {
     var elite = document.getElementById("elite");
     var elite1 = document.getElementById("elite1");
     var elite2 = document.getElementById("elite2");
-    var nav = document.getElementById("navbar");;
+    var nav = document.getElementById("navbar");
     var body = document.body;
-  
     var cname = document.getElementById("clientName");
     var email = document.getElementById("email");
     var service = document.getElementById("service");
@@ -80,6 +79,7 @@ darkModeToggle = () => {
     document.getElementsByClassName("cabbooking")[2].style.backgroundColor="#212529"
     document.getElementById("contactform").style.backgroundColor = "#212529";
     document.getElementById("contactform").style.borderColor = "grey";
+    document.getElementById("contactform").style.borderLeftColor = "transparent";
     body.style.backgroundColor = "#212529";
     document.getElementById('cabname').style.backgroundColor="#212529";
     document.getElementById('cabnum').style.backgroundColor="#212529";
@@ -101,6 +101,7 @@ darkModeToggle = () => {
     document.getElementById('aloc').style.backgroundColor="#212529";
     document.getElementById("booking1").style.backgroundColor="#212529";
     document.getElementById("booking2").style.backgroundColor="#212529";
+    document.getElementById("cabBookingImg").src="cabBookingdark.png";
     elite.style.borderColor = "grey";
     elite1.style.borderColor = "grey";
     elite2.style.borderColor = "grey";
@@ -160,6 +161,8 @@ darkModeToggle = () => {
     document.getElementsByClassName("cabbooking")[2].style.backgroundColor="#ffff"
     document.getElementById("contactform").style.backgroundColor = "white";
     document.getElementById("contactform").style.borderColor = "lightgrey";
+    document.getElementById("contactform").style.borderLeftColor = "transparent";
+    document.getElementById("cabBookingImg").src="3682361.jpg";
     body.style.backgroundColor = "#ffff";
     elite.style.borderColor = "#f4f4f6";
     elite1.style.borderColor = "#f4f4f6";
