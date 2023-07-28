@@ -79,7 +79,6 @@ darkModeToggle = () => {
     document.getElementsByClassName("cabbooking")[2].style.backgroundColor="#212529"
     document.getElementById("contactform").style.backgroundColor = "#212529";
     document.getElementById("contactform").style.borderColor = "grey";
-    document.getElementById("contactform").style.borderLeftColor = "transparent";
     body.style.backgroundColor = "#212529";
     document.getElementById('cabname').style.backgroundColor="#212529";
     document.getElementById('cabnum').style.backgroundColor="#212529";
@@ -161,7 +160,6 @@ darkModeToggle = () => {
     document.getElementsByClassName("cabbooking")[2].style.backgroundColor="#ffff"
     document.getElementById("contactform").style.backgroundColor = "white";
     document.getElementById("contactform").style.borderColor = "lightgrey";
-    document.getElementById("contactform").style.borderLeftColor = "transparent";
     document.getElementById("cabBookingImg").src="3682361.jpg";
     body.style.backgroundColor = "#ffff";
     elite.style.borderColor = "#f4f4f6";
