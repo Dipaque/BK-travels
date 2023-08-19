@@ -29,6 +29,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
 
+  <!-- Firebase -->
+
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
   <!-- Font-style -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,11 +51,12 @@
     body {
       font-family: 'Wix Madefor Display';
       background-color: #FFFF;
-      overflow-x:hidden;
+      overflow-x: hidden;
     }
   </style>
   <!-- JS -->
-  <script src="index.js"></script>
+  <script defer src="index.js"></script>
+  <script defer src="Login.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
@@ -105,6 +112,28 @@
       </div>
     </div>
   </nav>
+
+  <div id="errorBox1" class="alert "
+    style=" border:2px solid #efbeb7;
+  background-color: #efbeb7;
+  height:4rem;
+  width:19rem;
+  padding-top: 1rem;
+  border-radius: 8px;
+  color:#a24025;position:fixed;top:10%;z-index: 2;float: right; right: 6%;display: none;transition: ease-in-out 6s;box-shadow:0px 8px 16px 0px rgba(0,0,0,0.19);">
+    <img class="me-2" src="warning.png" height="20" width="20"> Please complete form !</div>
+
+  <div id="msgBox1" class="alert "
+    style=" border:2px solid #b7efc5;
+background-color: #b7efc5;
+height:4rem;
+width:19rem;
+padding-top: 1rem;
+border-radius: 8px;
+color:#25a244;position:fixed;top:10%;z-index:1;float: right;right:6%;display: none; box-shadow:0px 8px 16px 0px rgba(0,0,0,0.19);"><img class="me-2"
+      src="check.png" height="20" width="20"> Message sent successfully!</div>
+
+
   <!-- Home -->
   <div class="about container text-start mt-5  " id="section0">
     <div class="row">
@@ -182,7 +211,8 @@
                 style="border-radius: 50px; width: 150px; height: 250px; background-image: url('white.jpg');  background-position:center;background-size: cover;">
                 <h6
                   style="font-family: 'Poppins'; color: #ffff;margin-top:75%; font-weight: 900; float: left; margin-left: 15%; font-size: larger;">
-                  <b>Architecture</b></h6>
+                  <b>Architecture</b>
+                </h6>
               </div>
               <div class="swiper-slide" style="border-radius: 50px; width: 150px;height:250px; background-image: url('auroville.jpg');  background-position:center;
                       background-size: cover;">
@@ -234,7 +264,7 @@
   </div>
   <!-- Booking -->
   <div class="container service mt-5 " id="tourbooking">
-    <h5  class="text-center m-2 pt-5 mb-3" style="color:#FB8500; font-family: 'Poppins',sans-serif;"><b>Share your tour
+    <h5 class="text-center m-2 pt-5 mb-3" style="color:#FB8500; font-family: 'Poppins',sans-serif;"><b>Share your tour
         plan with us!</b></h5>
     <p class=" text-center mt-4 mb-5" style="color:grey; font-size: larger;">Give us a chance to make it happen <i
         class="fa-solid fa-leaf ms-2"></i></p>
@@ -247,18 +277,18 @@
           <div class="row ">
             <div class="col-lg-6 ps-3 ">
               <label style="color: grey;">Name</label>
-              <input  class=" mb-3 pb-4 pt-4" type="text" id="name" placeholder="" name="name" required>
+              <input class=" mb-3 pb-4 pt-4" type="text" id="tname" placeholder="" name="name" required>
             </div>
 
             <div class="col-lg-6">
               <label style="color: grey;">Mobile Number</label>
-              <input class="mb-3 pb-4 pt-4" type="text" placeholder="" name="number" required>
+              <input id="tnum" class="mb-3 pb-4 pt-4" type="text" placeholder="" name="number" required>
             </div>
           </div>
           <div class="row ">
             <div class="col-lg-6 ">
               <label style="color: grey;">Location</label>
-              <input class=" mb-3 pb-4 pt-4" type="text" id="locate" name="Location" required>
+              <input id="tloc" class=" mb-3 pb-4 pt-4" type="text" name="Location" required>
             </div>
             <div class="col-lg-6">
               <label style="color:grey;">Start Date</label>
@@ -268,7 +298,7 @@
           </div>
           <div class="row ">
             <div class="col-lg-6 ">
-              <select class=" mb-3 mt-3 pb-5 " name="Package"
+              <select id="tpackage" class=" mb-3 mt-3 pb-5 " name="Package"
                 style="color: grey; background-color: #ffff; border:none; border-radius: none; border-bottom:1px solid grey; font-family: 'Wix Madefor Display'; width: 75%;">
                 <option selected style="font-family: 'Wix Madefor Display';">Tour Packages</option>
                 <option id="option" value="1">Silver</option>
@@ -277,7 +307,7 @@
               </select>
             </div>
             <div class="col-lg-6">
-              <select class=" mb-3 mt-3 pb-5 " name="Type"
+              <select id="ttype" class=" mb-3 mt-3 pb-5 " name="Type"
                 style="color: grey; background-color: #ffff; border:none; border-radius: none; border-bottom:1px solid grey; font-family: 'Wix Madefor Display'; width: 75%;">
                 <option selected style="font-family: 'Wix Madefor Display';">Plan Type</option>
                 <option value="1">Business</option>
@@ -291,15 +321,17 @@
           <div class="row ">
             <div class="col-lg-6 ">
               <label class="mt-4" style="color: grey;">No of Days</label>
-              <input class=" mb-3 pb-4 pt-4" type="text" placeholder="" name="days" required>
+              <input id="tdays" class=" mb-3 pb-4 pt-4" type="text" placeholder="" name="days" required>
             </div>
             <div class="col-lg-6">
               <label class="mt-4" style="color:grey;">No of Guest</label>
-              <input class="mb-3 pb-4 pt-4" id="guestcount" type="text" placeholder="" name="guest" required>
+              <input id="tcount" class="mb-3 pb-4 pt-4" id="guestcount" type="text" placeholder="" name="guest"
+                required>
             </div>
           </div>
 
-          <button class="tourbook mt-2 me-5 mb-5 " style="float:left;" type="submit">Book now</button>
+          <button class="tourbook mt-2 me-5 mb-5 " style="float:left;" type="button" onclick="saveTour()">Book
+            now</button>
           <style>
             .tourbook {
               outline: none;
@@ -342,8 +374,8 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mb-3 p-3 ">
-          <a href="index.html"><img class=" mb-3" src="favicon_prev_ui.png" onclick="index.html" height="60"
-              width="60"></a><br>
+          <a href="index.html"><img class=" mb-3" src="favicon_prev_ui.png" onclick="index.html" height="70"
+              width="70"></a><br>
           <a style="text-decoration: none; color:grey;line-height: 2.8; " class=""
             href="mailto:BKtravels01@gmail.com">BKtravels01@gmail.com</a><br>
           <p style="text-decoration: none; color:grey; ">+91 7708994177</p>

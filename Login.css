@@ -1,0 +1,62 @@
+
+
+
+.loginPage {
+  color: grey;
+  font-family: 'Jost', sans-serif;
+  display:none;
+}
+
+.LoginInput {
+  border: 2px solid grey;
+  width: 60%;
+  height: 3rem;
+  padding-left: 20%;
+  border-radius: 25px;
+  margin-left: 20%;
+}
+
+.LoginInput:focus {
+  outline: #436E8E;
+  border: 2px solid #436E8E;
+}
+
+.loginbtn {
+  border: none;
+  background-color: none;
+  border: 2px solid #436E8E;
+  background-color: #436E8E;
+  color: #ffff;
+  width: 60%;
+  height: 3rem;
+  border-radius: 25px;
+  margin-left: 20%;
+}
+
+@media(max-width:576px) {
+  .LoginInput  {
+    margin-left: 10%;
+    width: 80%;
+  }
+}
+@media(max-width:576px) {
+  .loginbtn  {
+    margin-left: 10%;
+    width: 80%;
+  }
+}
+.loginbtn:hover{
+  background-color: #5e89ab;
+  border-color: #5e89ab;
+}
+a.signUpLink{
+  text-decoration: none;
+  color: grey;
+}
+a.signUpLink:hover :active{
+  text-decoration: none;
+  color:#436E8E;
+}
+#message{
+  transition: ease-in;
+}
