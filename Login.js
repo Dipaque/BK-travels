@@ -213,14 +213,22 @@ save = () => {
     location: document.getElementById("aloc").value
 
   }
+  if(data.name==''|| data.num ==''||data.guest==''|| data.roomCount==''|| data.Ac==''|| data.location==''){
+    document.getElementById('errorAlert1').style.display='block';
+    setTimeout(()=>document.getElementById('errorAlert1').style.display='none',3000);
+  }
+  else{
   rf1.add(data).then(docRef => {
     console.log('Document written with ID: ', docRef.id);
-    document.getElementById('msgBox').style.display='block';
-    setTimeout(()=>document.getElementById('msgBox').style.display='none',3000);
+    document.getElementById('bookingAlert1').style.display='block';
+    setTimeout(()=>document.getElementById('bookingAlert1').style.display='none',3000);
   })
     .catch(error => {
       console.error('Error adding document: ', error);
+      document.getElementById('errorAlert1').style.display='block';
+      setTimeout(()=>document.getElementById('errorAlert1').style.display='none',3000);
     });
+  }
 };
 
 // Cab booking
@@ -237,14 +245,22 @@ saveCab = () => {
     Time: document.getElementById("cabtime").value
 
   }
+  if(data.name==''|| data.num ==''||data.departure==''|| data.destination==''|| data.Vehicle==''|| data.Time==''){
+    document.getElementById('errorAlert').style.display='block';
+    setTimeout(()=>document.getElementById('errorAlert').style.display='none',3000);
+  }
+  else{
   rf2.add(data).then(docRef => {
     console.log('Document written with ID: ', docRef.id);
-    document.getElementById('msgBox').style.display='block';
-    setTimeout(()=>document.getElementById('msgBox').style.display='none',3000);
+    document.getElementById('bookingAlert').style.display='block';
+    setTimeout(()=>document.getElementById('bookingAlert').style.display='none',3000);
   })
     .catch(error => {
       console.error('Error adding document: ', error);
+      document.getElementById('errorAlert').style.display='block';
+      setTimeout(()=>document.getElementById('errorAlert').style.display='none',3000);
     });
+  }
 };
 
 // Camera Booking
@@ -261,14 +277,22 @@ saveCam = () => {
     Time: document.getElementById("camtime").value
 
   }
+  if(data.name==''|| data.num ==''||data.model==''|| data.variant==''|| data.lens==''|| data.Time==''){
+    document.getElementById('errorAlert2').style.display='block';
+    setTimeout(()=>document.getElementById('errorAlert2').style.display='none',3000);
+  }
+  else{
   rf3.add(data).then(docRef => {
     console.log('Document written with ID: ', docRef.id);
-    document.getElementById('msgBox').style.display='block';
-    setTimeout(()=>document.getElementById('msgBox').style.display='none',3000);
+    document.getElementById('bookingAlert2').style.display='block';
+    setTimeout(()=>document.getElementById('bookingAlert2').style.display='none',3000);
   })
     .catch(error => {
       console.error('Error adding document: ', error);
+      document.getElementById('errorAlert2').style.display='block';
+      setTimeout(()=>document.getElementById('errorAlert2').style.display='none',3000);
     });
+  }
 };
 
 

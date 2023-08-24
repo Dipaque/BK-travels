@@ -118,26 +118,30 @@
       </div>
     </div>
   </nav>
-
+<!-- message box -->
   <div id="errorBox" class="alert "
     style=" border:2px solid #efbeb7;
   background-color: #efbeb7;
+  font-family: 'Poppins';
+              font-weight: 600;
   height:4rem;
   width:19rem;
   padding-top: 1rem;
   border-radius: 8px;
-  color:#a24025;position:fixed;top:27%;z-index: 2;float: right; right: 6%;display: none;transition: ease-in-out 6s;box-shadow:0px 8px 16px 0px rgba(0,0,0,0.19);">
+  color:#a24025;position:fixed;top:10%;z-index: 2;float: right; right: 8%;display: none;transition: ease-in-out 6s;box-shadow:0px 8px 16px 0px rgba(0,0,0,0.19);">
     <img class="me-2" src="warning.png" height="20" width="20"> Please complete form !</div>
 
   <div id="msgBox" class="alert "
     style=" border:2px solid #b7efc5;
 background-color: #b7efc5;
+font-family: 'Poppins';
+              font-weight: 600;
 height:4rem;
 width:19rem;
 padding-top: 1rem;
 border-radius: 8px;
-color:#25a244;position:fixed;top:10%;z-index:1;float: right;right:6%;display: none; box-shadow:0px 8px 16px 0px rgba(0,0,0,0.19);"><img class="me-2"
-      src="check.png" height="20" width="20"> Message sent successfully!</div>
+color:#25a244;position:fixed;top:10%;z-index:1;float: right;right:8%;display: none; box-shadow:0px 8px 16px 0px rgba(0,0,0,0.19);"><img class="me-2"
+      src="check.png" height="20" width="20"> Thanks for contacting us!</div>
 
   <!-- Home -->
   <div class="home  "
@@ -226,6 +230,27 @@ color:#25a244;position:fixed;top:10%;z-index:1;float: right;right:6%;display: no
                     color: rgb(247, 97, 97);
                   }
                 </style>
+                <div id="errorAlert1" class="alert "
+                style=" border:2px solid #efbeb7;
+              background-color: #efbeb7;font-family: 'Poppins';
+              font-weight: 600;
+              height:5rem;
+              width:19rem;
+              padding-top: 1rem;
+              border-radius: 8px;
+              color:#a24025;position:fixed;top:10%;z-index: 1;float: right; right: 8%;display: none;transition: ease-in-out 6s;box-shadow:0px 8px 16px 0px rgba(0,0,0,0.19);">
+                <img class="me-2" src="warning.png" height="20" width="20"> Some error occured or form is incomplete.</div>
+                <div id="bookingAlert1" class="alert "
+                style=" border:2px solid #b7efc5;
+                font-family: 'Poppins';
+              font-weight: 600;
+            background-color: #b7efc5;
+            height:5rem;
+            width:19rem;
+            padding-top: 1rem;
+            border-radius: 8px;
+            color:#25a244;position:fixed;top:10%;z-index:1;float: right;right:8%;display: none; box-shadow:0px 8px 16px 0px rgba(0,0,0,0.19);"><img class="me-2"
+                  src="check.png" height="20" width="20"> Your booking placed successfully!</div>
                 <h5 class="text-center m-2 pt-5 mb-3" style="color:#FB8500; font-family: 'Poppins',sans-serif;"><b>The
                     perfect place to relax and recharge!</b></h5>
                 <div class="row">
@@ -318,6 +343,28 @@ color:#25a244;position:fixed;top:10%;z-index:1;float: right;right:6%;display: no
                     color: rgb(247, 97, 97);
                   }
                 </style>
+                <div id="errorAlert" class="alert "
+                style=" border:2px solid #efbeb7;
+              background-color: #efbeb7;
+              font-family: 'Poppins';
+              font-weight: 600;
+              height:5rem;
+              width:19rem;
+              padding-top: 1rem;
+              border-radius: 8px;
+              color:#a24025;position:fixed;top:10%;z-index: 1;float: right; right: 8%;display: none;transition: ease-in-out 6s;box-shadow:0px 8px 16px 0px rgba(0,0,0,0.19);">
+                <img class="me-2" src="warning.png" height="20" width="20"> Some error occured or form is incomplete.</div>
+                <div id="bookingAlert" class="alert "
+                style=" border:2px solid #b7efc5;
+            background-color: #b7efc5;
+            font-family: 'Poppins';
+              font-weight: 600;
+            height:5rem;
+            width:19rem;
+            padding-top: 1rem;
+            border-radius: 8px;
+            color:#25a244;position:fixed;top:10%;z-index:1;float: right;right:8%;display: none; box-shadow:0px 8px 16px 0px rgba(0,0,0,0.19);"><img class="me-2"
+                  src="check.png" height="20" width="20"> Your booking  placed successfully!</div>
                 <h5 class="text-center m-2 pt-5 mb-3" style="color:#FB8500; font-family: 'Poppins',sans-serif;"><b>Book
                     your cab online Anywhere Anytime!</b></h5>
                 <div class="row">
@@ -334,8 +381,8 @@ color:#25a244;position:fixed;top:10%;z-index:1;float: right;right:6%;display: no
                         </div>
 
                         <div class="col-lg-6">
-                          <label style="color: grey;">Mobile Number</label>
-                          <input id="cabnum" class="mb-3 pb-4 pt-2" type="text" placeholder="" name="number" required>
+                          <label style="color: grey;">Email</label>
+                          <input id="cabnum" class="mb-3 pb-4 pt-2" type="email" placeholder="" name="number" required>
                         </div>
                       </div>
                       <div class="row ps-3">
@@ -370,11 +417,11 @@ color:#25a244;position:fixed;top:10%;z-index:1;float: right;right:6%;display: no
                         </div>
                         <div class="col-lg-6">
                           <label style="color:grey;">Time</label>
-                          <input id="cabtime" class="mb-1 pb-4 pt-2" type="text" placeholder="" name="time" required>
+                          <input id="cabtime" class="mb-1 pb-4 pt-2" type="time" placeholder="" name="time" required>
                         </div>
                       </div>
-                      <button class="booknow mt-2 ms-3 mb-3 me-5 " style="float:left; " type="button"
-                        onclick="saveCab()">Book now</button>
+                      <button id="cabButton" class="booknow mt-2 ms-3 mb-3 me-5 " style="float:left; " type="button"
+                        onclick="saveCab();">Book now</button>
                       <style>
                         .booknow {
                           outline: none;
@@ -426,6 +473,28 @@ color:#25a244;position:fixed;top:10%;z-index:1;float: right;right:6%;display: no
                     color: rgb(247, 97, 97);
                   }
                 </style>
+                <div id="errorAlert2" class="alert "
+                style=" border:2px solid #efbeb7;
+              background-color: #efbeb7;
+              font-family: 'Poppins';
+              font-weight: 600;
+              height:5rem;
+              width:19rem;
+              padding-top: 1rem;
+              border-radius: 8px;
+              color:#a24025;position:fixed;top:10%;z-index: 1;float: right; right: 8%;display: none;transition: ease-in-out 6s;box-shadow:0px 8px 16px 0px rgba(0,0,0,0.19);">
+                <img class="me-2" src="warning.png" height="20" width="20"> Some error occured or form is incomplete.</div>
+                <div id="bookingAlert2" class="alert "
+                style=" border:2px solid #b7efc5;
+            background-color: #b7efc5;
+            font-family: 'Poppins';
+              font-weight: 600;
+            height:5rem;
+            width:19rem;
+            padding-top: 1rem;
+            border-radius: 8px;
+            color:#25a244;position:fixed;top:10%;z-index:1;float: right;right:8%;display: none; box-shadow:0px 8px 16px 0px rgba(0,0,0,0.19);"><img class="me-2"
+                  src="check.png" height="20" width="20"> Your booking placed successfully!</div>
                 <h5 class="text-center m-2 pt-5 mb-3" style="color:#FB8500; font-family: 'Poppins',sans-serif;">
                   <b>Capture your memorable moments with our camera's!</b>
                 </h5>
@@ -656,6 +725,7 @@ color:#25a244;position:fixed;top:10%;z-index:1;float: right;right:6%;display: no
     <p style="color:grey;font-family: 'Wix Madefor Display'; font-size: medium; ">© 2023 <a href="index.html"
         style="color:#FB8500;text-decoration: none;"> BK Travels.</a> All Rights Reserved.</p>
   </div>
+
   <!-- Firebase -->
   <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>

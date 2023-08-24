@@ -1,5 +1,27 @@
+var nodemailer=require('nodemailer');
+var transporter=nodemailer.createTransport({
+  service:'gmail',
+  
+  auth:{
+    user:'fayedeepak21@gmail.com',
+    pass:'gjgdzcstcbaqsphb'
+  }
+});
+var mailOptons={
+    from:'fayedeepak21@gmail.com',
+    to:'rajadeepak1989@gmail.com',
+    subject:'Booking Confirmation',
+    text:'Your cab is booked successfully!,thank you for choosing us!'
+}
 
-
+  transporter.sendMail(mailOptons,function(error,info){
+  if(error){
+    console.log(error)
+  }
+  else{
+    console.log('Email sent: '+info.response);
+  }
+})
 // change navlink color
 $(document).ready(function () {
   $("ul.navbar-nav > li").click(function (e) {
@@ -7,9 +29,6 @@ $(document).ready(function () {
     $(this).addClass("active");
   });
 });
-
-
-
 function on() {
   document.getElementById("overlay").style.display = "block";
 }
