@@ -1,5 +1,27 @@
+var nodemailer=require('nodemailer');
+var transporter=nodemailer.createTransport({
+  service:'gmail',
+  
+  auth:{
+    user:'fayedeepak21@gmail.com',
+    pass:'gjgdzcstcbaqsphb'
+  }
+});
+var mailOptons={
+    from:'fayedeepak21@gmail.com',
+    to:'rajadeepak1989@gmail.com',
+    subject:'Booking Confirmation',
+    text:'Your cab is booked successfully!,thank you for choosing us!'
+}
 
-
+  transporter.sendMail(mailOptons,function(error,info){
+  if(error){
+    console.log(error)
+  }
+  else{
+    console.log('Email sent: '+info.response);
+  }
+})
 // change navlink color
 $(document).ready(function () {
   $("ul.navbar-nav > li").click(function (e) {
@@ -7,9 +29,6 @@ $(document).ready(function () {
     $(this).addClass("active");
   });
 });
-
-
-
 function on() {
   document.getElementById("overlay").style.display = "block";
 }
@@ -36,7 +55,7 @@ function explore() {
   document.getElementById('newdate').value = date;
   let count = document.getElementById('guest').value;
   document.getElementById('guestcount').value = count;
-  let loc = document.getElementById('getLoc').
+  let loc = document.getElementById('getLocation').value;
   console.log(loc);
   document.getElementById('locate').value = loc;
 }
@@ -50,6 +69,8 @@ countClick = () => {
   clickCount++;
   return clickCount;
 }
+
+
 // darkModeToggle = () => {
 //   var count = countClick();
 //   console.log(count);
@@ -175,3 +196,4 @@ countClick = () => {
 //     elite2.style.backgroundColor = "#f4f4f6";
 //   }
 // }
+
