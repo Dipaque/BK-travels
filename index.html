@@ -60,8 +60,8 @@
   <!-- JS -->
   <script src="index.js"></script>
   <script defer src="Login.js"></script>
-  <!-- Analytics -->
-  <script defer src="/_vercel/insights/script.js"></script>
+  <script src="../practice.js"></script>
+
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Eczar:wght@800&family=Wix+Madefor+Display&display=swap');
@@ -266,8 +266,8 @@ color:#25a244;position:fixed;top:10%;z-index:1;float: right;right:8%;display: no
                         </div>
 
                         <div class="col-lg-6">
-                          <label style="color: grey;">Mobile Number</label>
-                          <input id="anum" class="mb-3 pb-4 pt-2" type="text" placeholder="" required>
+                          <label style="color: grey;">Email</label>
+                          <input id="anum" class="mb-3 pb-4 pt-2" type="email" placeholder="" required>
                         </div>
                       </div>
                       <div class="row ps-3">
@@ -290,7 +290,7 @@ color:#25a244;position:fixed;top:10%;z-index:1;float: right;right:8%;display: no
                           <input id="aloc" class="mb-1 pb-4 pt-2" type="text" placeholder="" required>
                         </div>
                       </div>
-                      <button id="" class="booknow mt-2 ms-3 mb-3 me-5 " style="float:left; " type="button"
+                      <button id="" class="booknow mt-2 ms-3 mb-3 me-5 " style="float:left; " type="submit"
                         onclick="save()">Book now</button>
                       <style>
                         .booknow {
@@ -371,8 +371,8 @@ color:#25a244;position:fixed;top:10%;z-index:1;float: right;right:8%;display: no
                   <div class="col-lg-6 mx-auto ">
                     <img id="cabBookingImg" class="img-fluid mx-auto mt-5 " src="3682361.jpg" height="80%" width="60%">
                   </div>
-                  <div class="col-lg-6 text-start mt-5 pt-2  cabbooking">
-                    <form class="mt-3">
+                  <div  class="col-lg-6 text-start mt-5 pt-2  cabbooking">
+                    <form id="carBookingForm" class="mt-3">
                       <div class="row  ps-3 ">
                         <div class="col-lg-6 ps-3 ">
                           <label style="color: grey;">Name</label>
@@ -420,7 +420,7 @@ color:#25a244;position:fixed;top:10%;z-index:1;float: right;right:8%;display: no
                           <input id="cabtime" class="mb-1 pb-4 pt-2" type="time" placeholder="" name="time" required>
                         </div>
                       </div>
-                      <button id="cabButton" class="booknow mt-2 ms-3 mb-3 me-5 " style="float:left; " type="button"
+                      <button id="cabButton" class="booknow mt-2 ms-3 mb-3 me-5 " style="float:left; " type="submit"
                         onclick="saveCab();">Book now</button>
                       <style>
                         .booknow {
@@ -503,7 +503,7 @@ color:#25a244;position:fixed;top:10%;z-index:1;float: right;right:8%;display: no
                     <img class="img-fluid mt-5  mx-auto " src="Camera_prev_ui.png" height="90%" width="80%">
                   </div>
                   <div class="col-lg-6 text-start mt-5 pt-2  cabbooking">
-                    <form class="mt-3">
+                    <form id="camBookingForm" class="mt-3">
                       <div class="row  ps-3 ">
                         <div class="col-lg-6 ps-3 ">
                           <label style="color: grey;">Name</label>
@@ -512,8 +512,8 @@ color:#25a244;position:fixed;top:10%;z-index:1;float: right;right:8%;display: no
                         </div>
 
                         <div class="col-lg-6">
-                          <label style="color: grey;">Mobile Number</label>
-                          <input id="camnum" class="mb-3 pb-4 pt-2" type="text" placeholder="" name="number" required>
+                          <label style="color: grey;">Email</label>
+                          <input id="camnum" class="mb-3 pb-4 pt-2" type="email" placeholder="" name="number" required>
                         </div>
                       </div>
                       <div class="row ps-3">
@@ -537,7 +537,7 @@ color:#25a244;position:fixed;top:10%;z-index:1;float: right;right:8%;display: no
                           <input id="camtime" class="mb-1 pb-4 pt-2" type="text" placeholder="" name="time" required>
                         </div>
                       </div>
-                      <button class="booknow mt-2 ms-3 mb-3 me-5 " style="float:left; " type="button"
+                      <button class="booknow mt-2 ms-3 mb-3 me-5 " style="float:left; " type="submit"
                         onclick="saveCam()">Book now</button>
                       <style>
                         .booknow {
@@ -700,6 +700,82 @@ color:#25a244;position:fixed;top:10%;z-index:1;float: right;right:8%;display: no
       </div>
     </div>
   </div>
+
+<!-- node mailer -->
+<script>
+   const carForm = document.getElementById("carBookingForm");
+   const camForm=document.getElementById('camBookingForm');
+   const roomBooking=document.getElementById('roomBooking')
+        carForm.addEventListener('submit',(e)=>{
+
+        e.preventDefault();
+        let formData={
+           to : document.getElementById('email').value,
+             name :document.getElementById('cabname').value,
+            //  message : document.getElementById('msg').value
+
+        }
+
+        let xhr =new XMLHttpRequest();
+        xhr.open('POST','/');
+        xhr.setRequestHeader('content-type','application/json');
+        xhr.onload=function(){
+            console.log(xhr.responseText);
+            if(xhr.responseText=="success"){
+                console.log("Email sent");
+            }
+        }   
+        xhr.send(JSON.stringify(formData)) 
+
+    })
+
+    roomBooking.addEventListener('submit',(e)=>{
+
+e.preventDefault();
+let formData={
+   to : document.getElementById('anum').value,
+     name :document.getElementById('aname').value,
+    //  message : document.getElementById('msg').value
+
+}
+
+let xhr =new XMLHttpRequest();
+xhr.open('POST','/');
+xhr.setRequestHeader('content-type','application/json');
+xhr.onload=function(){
+    console.log(xhr.responseText);
+    if(xhr.responseText=="success"){
+        console.log("Email sent");
+    }
+}   
+xhr.send(JSON.stringify(formData)) 
+
+})
+
+camForm.addEventListener('submit',(e)=>{
+
+e.preventDefault();
+let formData={
+   to : document.getElementById('camnum').value,
+     name :document.getElementById('camname').value,
+    //  message : document.getElementById('msg').value
+
+}
+
+let xhr =new XMLHttpRequest();
+xhr.open('POST','/');
+xhr.setRequestHeader('content-type','application/json');
+xhr.onload=function(){
+    console.log(xhr.responseText);
+    if(xhr.responseText=="success"){
+        console.log("Email sent");
+    }
+}   
+xhr.send(JSON.stringify(formData)) 
+
+})
+
+</script>
   <!-- Footer -->
   <div class="h_line mt-4"></div>
   <footer class="container-fluid">

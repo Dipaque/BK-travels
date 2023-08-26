@@ -75,7 +75,6 @@ passwordVisible1 = () => {
   else {
     passwordType.type = "password";
     eye1.className = "fa-regular fa-eye"
-
   }
 }
 
@@ -98,11 +97,8 @@ passwordVisible2 = () => {
   else {
     passwordType.type = "password";
     eye2.className = "fa-regular fa-eye"
-
   }
 }
-
-
 
 // SIGN UP
 signUp = () => {
@@ -131,10 +127,7 @@ signUp = () => {
   }
 }
 const db = firebase.firestore();
-
-
 // Tour Booking
-
 const rf4 = db.collection('Tour');
 // Store in db
 saveTour = () => {
@@ -166,12 +159,7 @@ saveTour = () => {
 }
 
 
-
-
-
-
 //Contact Form
-
 // Create a reference to a collection
 const rf = db.collection('ContactForm');
 // Store in db
@@ -184,9 +172,12 @@ contactForm.addEventListener("submit", e => {
     email: document.getElementById("email").value,
     number: document.getElementById("number").value,
     msg:document.getElementById('msg').value
-
   }
   if(data.name=="" || data.email=="" || data.service=="" || data.number=='' || data.msg==""){
+    document.getElementById('errorBox').style.display='block';
+    setTimeout(()=>document.getElementById('errorBox').style.display='none',3000);
+  }
+  else if(data.number>'999999999'){
     document.getElementById('errorBox').style.display='block';
     setTimeout(()=>document.getElementById('errorBox').style.display='none',3000);
   }
@@ -202,16 +193,13 @@ contactForm.addEventListener("submit", e => {
   }
 })
 
-
-
 // Room Booking
-
 const rf1 = db.collection('room');
 // Store in db
 save = () => {
   var data = {
     name: document.getElementById("aname").value,
-    num: document.getElementById("anum").value,
+    email: document.getElementById("anum").value,
     guest: document.getElementById("aguest").value,
     roomCount: document.getElementById("atype").value,
     Ac: document.getElementById("acac").value,
@@ -275,7 +263,7 @@ const rf3 = db.collection('Camera');
 saveCam = () => {
   var data = {
     name: document.getElementById("camname").value,
-    num: document.getElementById("camnum").value,
+    email: document.getElementById("camnum").value,
     model: document.getElementById("cammodel").value,
     variant: document.getElementById("camvariant").value,
     lens: document.getElementById("camlens").value,
