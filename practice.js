@@ -177,10 +177,7 @@
 //   console.log(`Server is running at ${hostname}`);
 // });
 const express = require("express");
-// const bodyParser = require("body-parser");
-// const exphbs=require('express-handlebars');
 const nodemailer = require("nodemailer");
-// const path=require('path');
 const app = express();
 const port = process.env.PORT || 3000;
    
@@ -212,7 +209,7 @@ const mailOptions = {
     from: "bktravels759@gmail.com",
     to: req.body.to,
     subject: "Booking Confirmation",
-    text: `Dear ${req.body.name},We are excited to inform you that your recent on booking on BK-travels has been successfully processed and confirmed. Thank you for choosing us.`
+    text: `Dear ${req.body.name},We are excited to inform you that your recent  booking on BK-travels ${req.body.service} at ${req.body.time} has been successfully processed and confirmed.Thank you for choosing us.`
 };
 
 transporter.sendMail(mailOptions, (error, info) => {
