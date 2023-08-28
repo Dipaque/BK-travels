@@ -192,7 +192,7 @@ app.use(express.json())
 
 // Serve the HTML form
 app.get("/", (req, res) => {
-    res.sendFile( '/BK-travels-main/index.html');
+    res.sendFile( 'BK-travels-main/index.html');
 });
 
 app.post('/',(req,res)=>{
