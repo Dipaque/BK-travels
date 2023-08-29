@@ -183,7 +183,7 @@ const port = process.env.PORT || 3000;
    
 
 
-app.use(express.static('BK-travels-main'));
+app.use(express.static('BK-travels'));
 app.use(express.json())
 
 // app.use("/public",express.static(path.join(__dirname,'public')));
@@ -192,7 +192,7 @@ app.use(express.json())
 
 // Serve the HTML form
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + '/BK-travels-main/index.html');
+    res.sendFile(__dirname + '/BK-travels/index.html');
 });
 
 app.post('/',(req,res)=>{
