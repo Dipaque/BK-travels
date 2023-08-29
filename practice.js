@@ -180,21 +180,12 @@ const express = require("express");
 const nodemailer = require("nodemailer");
 const app = express();
 const port = process.env.PORT || 3000;
-   
-
-
-app.use(express.static('BK-travels'));
+app.use(express.static('BK-travels-main'));
 app.use(express.json())
-
-// app.use("/public",express.static(path.join(__dirname,'public')));
-// app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(bodyParser.json());
-
 // Serve the HTML form
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + '/BK-travels/index.html');
+    res.sendFile(__dirname + '/BK-travels-main/index.html');
 });
-
 app.post('/',(req,res)=>{
 console.log(req.body);
 const transporter = nodemailer.createTransport({
@@ -218,26 +209,9 @@ transporter.sendMail(mailOptions, (error, info) => {
         
     } else {
         console.log("Email sent:", info.response);
-        // res.status(200).json({ message: "Email sent successfully" });
     }
 });
-
-
-
-
-
-
-
-
-
 })
-// Define the endpoint for sending emails
-// app.post("/send-email", (req, res) => {
-//     const { to, subject, message } = req.body;
-
-
-
-
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
